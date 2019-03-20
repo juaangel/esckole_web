@@ -1,0 +1,61 @@
+.navbar {
+    height: 70px !important;
+    background-color: #f9f9f9 !important;
+}
+.navbar .navbar-brand {
+  color: #707070 !important;
+}
+
+.navbar a{
+  color: #707070 !important;
+}
+
+.navbar a:hover{
+  color: #199450 !important;
+}
+
+#logo{
+    margin-top: -8px;
+}
+
+#menu{
+    margin-top: 8px;
+}
+
+.navbar-toggler-icon{
+    margin-top: 8px;
+}
+
+footer{
+    background-color: #136E3C !important;
+    width: 100%;
+    height: 28px;
+    position: fixed;
+    bottom: 0;
+    border-top: solid white 1px;
+    border-top-color: white;
+    font-size: 12px;
+}
+
+ul#contacto > li {
+  display: inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+@media (min-width: 768px) {
+  .position-md-absolute {
+    position: absolute;
+  }
+
+  .navbar-nav .nav-item:nth-child(2) {
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 741px) {
+    footer{
+        height: 32px;
+        font-size: 10px;
+    }
+}

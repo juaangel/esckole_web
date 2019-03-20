@@ -1,0 +1,61 @@
+#banner{
+    height: 140px;
+    background-image: url('/img/inicio/banner.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#banner .row{
+    height: 140px;
+}
+
+#banner p{
+    background-color: rgba( 0, 0, 0, 0.500 );
+    font-size: 25px;
+}
+
+#subtitle1{
+    color: #199450;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#mision{
+    background-color: #136E3C;
+}
+
+#mision p{
+    margin-bottom: 20px;
+}
+
+#vision{
+    background-color: #199450;
+}
+
+#vision p{
+    margin-bottom: 20px;
+}
+
+.white-sub{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cursos{
+    color: #199450;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 584px) {
+  #banner p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #banner p {
+    font-size: 15px;
+  }
+}

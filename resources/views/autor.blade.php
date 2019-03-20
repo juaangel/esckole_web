@@ -12,8 +12,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Nuestro CSS -->
-    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +21,7 @@
             <small class="text-center">EN CONSTRUCCIÓN</small>
             <h2>Página web del proyecto <strong>"esckole"</strong></h2>
             <img class="img-fluid animated fadeIn mb-4" src="img/catar-sys.png" alt="CATAR-SYS">
-            <h5 class="animated fadeIn mb-3">Esta página esta conformada por los siguientes PRUEBA:</h5>
+            <h5 class="animated fadeIn mb-3">Esta página esta conformada por los siguientes componentes:</h5>
                 <a class="animated fadeIn mb-3" href="https://laravel.com/" class="animated fadeIn mb-2">Laravel 5.7</a>
                 <a class="animated fadeIn mb-3" href="https://mdbootstrap.com/" class="animated fadeIn mb-2">Material Design for Bootstrap Free 4.7.1</a>
         </div>
