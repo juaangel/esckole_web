@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="css/styles/principal/aspirantes.css">
 @endsection
 @section('title') Aspirantes @endsection
+
 @section('content')
 
 <div class="container">
@@ -58,7 +59,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
-                <p>Puedes obtener tu ficha asistiendo al plantel y otorgargando los siguientes datos, o bien, solicitar tu ficha en línea.</p>
+                <p>Puedes obtener tu ficha asistiendo al plantel y otorgando los siguientes datos, o bien, solicitar tu ficha en línea.</p>
                 <ul style="font-size: 14px;">
                     <li>Nombre</li>
                     <li>CURP</li>
@@ -109,54 +110,50 @@
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
-            <form action="">
+            <form action="" method="post">
                 <div class="modal-body">
                     <p>Recibirás tu ficha en formato PDF una vez que envíes tus datos, imprime el archivo y asiste al examen de diagnóstico.</p>
                         <div class="md-form mb-5">
                             <label data-error="wrong" data-success="right" for="nom">Nombre</label>
-                            <input type="text" name="nom" class="form-control validate">
+                            <input required type="text" name="nom" class="form-control validate">
                         </div>
                         <div class="row" style="margin-top: -40px;">
                             <div class="col">
                                 <div class="md-form mb-5">
                                     <label data-error="wrong" data-success="right" for="apeP">Apellido paterno</label>
-                                    <input type="text" name="nom" class="form-control validate">
+                                    <input required type="text" name="apeP" class="form-control validate">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="md-form mb-5">
                                     <label data-error="wrong" data-success="right" for="apeM">Apellido materno</label>
-                                    <input type="text" name="apeM" class="form-control validate">
+                                    <input required type="text" name="apeM" class="form-control validate">
                                 </div>
                             </div>
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="curp">CURP</label>
-                            <input type="text" maxlength="18" name="curp" class="form-control validate text-uppercase">
+                            <input required type="text" maxlength="18" name="curp" class="form-control validate text-uppercase">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
-                           <i class="fas fa-envelope prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="dir">Dirección</label>
-                            <input type="text" name="dir" class="form-control validate">
+                            <input required type="text" name="dir" class="form-control validate">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
-                           <i class="fas fa-phone prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="tel">Teléfono</label>
-                            <input type="number" name="tel" class="form-control validate">
+                            <input required type="number" name="tel" class="form-control validate">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
-                           <i class="fas fa-envelope prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="email">Correo electrónico</label>
                             <input type="email" name="email" class="form-control validate">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="nomTutor">Nombre del tutor</label>
-                            <input type="text" name="nomTutor" class="form-control validate">
+                            <input required type="text" name="nomTutor" class="form-control validate">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
-                           <i class="fas fa-phone prefix grey-text"></i>
                             <label data-error="wrong" data-success="right" for="telTutor">Teléfono del tutor</label>
-                            <input type="number" name="telTutor" class="form-control validate">
+                            <input required type="number" name="telTutor" class="form-control validate">
                         </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="beca" style="font-size: 13px;">Tipo de beca</label>
@@ -168,7 +165,7 @@
                         </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="seguro" style="font-size: 13px;">Tipo de seguro</label>
-                            <select name="seguro" class="browser-default custom-select">
+                            <select id="seguro" name="seguro" class="browser-default custom-select">
                               <option value="Axa Seguros">Axa Seguros</option>
                               <option value="IMSS">IMSS</option>
                               <option value="ISSSTE">ISSSTE</option>
@@ -179,23 +176,43 @@
                               <option value="Otro">Otro</option>
                             </select>
                         </div>
-                        <div class="md-form mb-5">
-                            <label data-error="wrong" data-success="right" for="alergias">Alergías</label>
-                            <input type="text" name="alergias" class="form-control validate">
+                        <div id="inputSeguro" class="md-form mb-5">
+                            <label data-error="wrong" data-success="right" for="seguroOtro">Específica el nombre del seguro:</label>
+                            <input required type="text" name="seguroOtro" class="form-control validate">
                         </div>
                         <div class="md-form mb-5">
-                            <label data-error="wrong" data-success="right" for="enfermedades">Enfermedades</label>
-                            <input type="text" name="enfermedades" class="form-control validate">
+                             <label for="alergias">Alergías</label>
+                              <textarea name="alergias" class="md-textarea form-control" rows="3"></textarea>
+                        </div>
+                        <div class="md-form mb-5">
+                          <label for="enfermedades">Enfermedades</label>
+                           <textarea name="enfermedades" class="md-textarea form-control" rows="3"></textarea>
                         </div>
                 </div>
-                <div class="modal-footer">
-                   <div class="justify-content-center">
-                       <button type="submit" class="btn btn-primary waves-effect waves-light">Conseguir ficha</button>
-                   </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success btn-lg waves-effect waves-light">Conseguir ficha</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function () {
+          var inputSeguro = $('#inputSeguro');
+            inputSeguro.hide();
+
+            $('#seguro').on("change", function(){
+                var valor = $('#seguro').val();
+
+                if(valor == "Otro")
+                    inputSeguro.show(500);
+                else
+                    inputSeguro.hide(500);
+            });
+        });
+    </script>
 @endsection

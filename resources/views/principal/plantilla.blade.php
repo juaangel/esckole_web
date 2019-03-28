@@ -17,8 +17,6 @@
     
     <link rel="icon" type="image/png" href="favicon.ico">
     <title>CBTa 309 - @yield('title')</title>
-
-    @yield('jquery')
 </head>
 
 <body>
@@ -50,6 +48,8 @@
     <div style="margin-top: 70px">
         @yield('content')
         
+        <div style="margin-bottom: 80px;"></div>
+
         <footer class="page-footer">
             <div class="row align-items-center">
                 <p class="col text-left py-1" style="margin-left: 15px;">
@@ -79,4 +79,7 @@
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="js/mdb.min.js"></script>
+
+       <!-- jQuery -->
+        @yield('script')
 </body>
