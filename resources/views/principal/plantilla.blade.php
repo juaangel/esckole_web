@@ -17,6 +17,8 @@
     
     <link rel="icon" type="image/png" href="favicon.ico">
     <title>CBTa 309 - @yield('title')</title>
+
+    @yield('jquery')
 </head>
 
 <body>
@@ -33,7 +35,7 @@
                     <a class="nav-link" href="/">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Aspirantes</a>
+                    <a class="nav-link" href="/aspirantes">Aspirantes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cursos</a>
@@ -54,7 +56,7 @@
                     ©2019 Centro de Bachillerato Tecnológico Agropecuario #309</p>
                 <ul id="contacto" class="col text-right py-1">
                   <li>
-                      <a href="mailto: cbta309@gmail.com" style=" margin-right: 15px; margin-top: 1px;" target="_blank">
+                      <a href="mailto: cbta309@fakemail.com" style=" margin-right: 15px; margin-top: 1px;" target="_blank">
                         <i class="fas fa-envelope fa-lg white-text ml-3" aria-hidden="true"></i>
                         cbta309@fakemail.com</a>
                   </li>

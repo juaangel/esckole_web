@@ -68,35 +68,16 @@
     <div id="cursos" class="text-center" style="margin-top: 17px; margin-bottom: 60px;">
         <div class="view overlay zoom">
            <a href="#">
-               <img class="img-fluid w-75 rounded mx-auto d-block" src="img/inicio/ofimatica.png" alt="Escolar - Ofimatica"
+               <img class="img-fluid rounded mx-auto d-block img-cursos" src="img/inicio/ofimatica.png" alt="Escolar - Ofimatica"
                 style="margin-bottom: 20px;">
            </a>
         </div>
         <div class="view overlay zoom">
            <a href="#">
-               <img class="img-fluid w-75 rounded mx-auto d-block" src="img/inicio/agropecuario.png" alt="Escolar - Ofimatica">
+               <img class="img-fluid rounded mx-auto d-block img-cursos" src="img/inicio/agropecuario.png" alt="Escolar - Ofimatica">
            </a>
         </div>
     </div>
 </div>
-
-<!--<footer class="page-footer">
-    <div class="row align-items-center">
-        <p class="col text-left py-1" style="margin-left: 15px;">
-            ©2019 Centro de Bachillerato Tecnológico Agropecuario #309</p>
-        <ul id="contacto" class="col text-right py-1">
-          <li>
-              <a href="mailto: cbta309@gmail.com" style=" margin-right: 15px; margin-top: 1px;" target="_blank">
-                <i class="fas fa-envelope fa-lg white-text ml-3" aria-hidden="true"></i>
-                cbta309@fakemail.com</a>
-          </li>
-          <li>
-              <a href="tel:0000000000" style="margin-right: 15px; margin-top: 1px;" target="_blank">
-                <i class="fas fa-phone fa-lg white-text ml-3" aria-hidden="true"></i>
-                +52 1 (000) 000 0000</a>
-          </li>
-        </ul>  
-    </div>
-</footer>-->
 
 @endsection
