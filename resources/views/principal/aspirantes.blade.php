@@ -111,6 +111,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <form action="" method="post">
+                {{ csrf_field() }}
                 <div class="modal-body">
                     <p>Recibirás tu ficha en formato PDF una vez que envíes tus datos, imprime el archivo y asiste al examen de diagnóstico.</p>
                         <div class="md-form mb-5">
