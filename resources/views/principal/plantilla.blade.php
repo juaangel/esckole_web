@@ -36,10 +36,10 @@
                     <a class="nav-link" href="/aspirantes">Aspirantes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cursos</a>
+                    <a class="nav-link" href="/cursos">Cursos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="/contacto">Contacto</a>
                 </li>
             </ul>
         </div>

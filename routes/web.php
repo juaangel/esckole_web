@@ -1,7 +1,4 @@
 <?php
 
-Route::get('/', function () {
-    return view('principal.inicio');
-});
-
-Route::get('/aspirantes', 'InicioController@aspirantes');
+//Página principal / de inicio
+include 'rutas/principal.php';
