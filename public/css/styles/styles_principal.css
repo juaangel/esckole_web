@@ -1,5 +1,4 @@
 .navbar {
-    height: 70px !important;
     background-color: #f9f9f9 !important;
 }
 .navbar .navbar-brand {
@@ -47,6 +46,10 @@ ul#contacto > li {
     width: 600px;
 }
 
+#content{
+    margin-top: 70px;
+}
+
 /*PALETA DE COLORES*/
 .escko-green-1{
     color: #136E3C !important;
@@ -77,13 +80,17 @@ ul#contacto > li {
 /*-------------------------------------*/
 
 @media (min-width: 768px) {
-  .position-md-absolute {
-    position: absolute;
-  }
+    .navbar{
+        height: 70px !important;
+    }
 
-  .navbar-nav .nav-item:nth-child(2) {
-    margin-right: 80px;
-  }
+    .position-md-absolute {
+        position: absolute;
+    }
+
+    .navbar-nav .nav-item:nth-child(2) {
+        margin-right: 80px;
+    }
 }
 
 @media screen and (max-width: 741px) {
@@ -92,3 +99,9 @@ ul#contacto > li {
         font-size: 10px;
     }
 }
+@media screen and (max-width: 767px) {
+    #content{
+        margin-top: 136px;
+    }
+}
+

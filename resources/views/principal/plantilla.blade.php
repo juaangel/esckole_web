@@ -45,7 +45,7 @@
         </div>
     </nav>
     
-    <div style="margin-top: 70px">
+    <div id="content">
         @yield('content')
         
         <div style="margin-bottom: 80px;"></div>
@@ -83,3 +83,4 @@
        <!-- jQuery -->
         @yield('script')
 </body>
+</html>

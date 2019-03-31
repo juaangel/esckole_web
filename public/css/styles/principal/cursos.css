@@ -1,0 +1,30 @@
+.title-1{
+    font-size: 40px;
+}
+
+/*MARGENES-------------------------*/
+.main-container{
+    padding-top: 30px !important;
+}
+/*---------------------------------*/
+
+.nom-carrera{
+    font-size: 16px;
+}
+
+#cursos{
+    padding: 10px;
+    margin: 20px;
+}
+
+#img-ofimatica{
+    width: 360px;
+}
+
+.p-cursos{
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 500px){
+
+}

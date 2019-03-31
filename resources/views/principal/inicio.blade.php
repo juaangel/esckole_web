@@ -6,13 +6,11 @@
 @section('content')
 
 <!-- Banner / Nombre de escuela -->
-<div id="banner" class="w-100">
-    <div class="row w-100 align-items-center text-center">
-        <p class="container font-weight-bolder text-white">
-            CENTRO DE BACHILLERATO TECNOLÓGICO AGROPECUARIO <br>
-            No. 309 "CONGREGACIÓN HIDALGO"
-        </p>
-    </div>
+<div id="banner" class="w-100 d-flex justify-content-center align-items-center text-center">
+    <p class="container font-weight-bolder text-white">
+        CENTRO DE BACHILLERATO TECNOLÓGICO AGROPECUARIO <br>
+        No. 309 "CONGREGACIÓN HIDALGO"
+    </p>
 </div>
 
 <h4 id="subtitle1" class="text-center font-weight-bolder">¿Quiénes somos?</h4>
