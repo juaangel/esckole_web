@@ -62,6 +62,7 @@
                 <p>Puedes obtener tu ficha asistiendo al plantel y otorgando los siguientes datos, o bien, solicitar tu ficha en línea.</p>
                 <ul style="font-size: 14px;">
                     <li>Nombre</li>
+                    <li>Fecha de nacimiento</li>
                     <li>CURP</li>
                     <li>Dirección</li>
                     <li>Teléfono</li>
@@ -118,6 +119,10 @@
                             <label data-error="wrong" data-success="right" for="nom">Nombre</label>
                             <input required type="text" name="nom" class="form-control validate">
                         </div>
+                        <div class="mb-5"  style="margin-top: -20px;">
+                            <label data-error="wrong" data-success="right" for="f_nac">Fecha de nacimiento</label>
+                            <input required type="date" name="f_nac" class="form-control validate">
+                        </div>
                         <div class="row" style="margin-top: -40px;">
                             <div class="col">
                                 <div class="md-form mb-5">
@@ -146,7 +151,7 @@
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="email">Correo electrónico</label>
-                            <input type="email" name="email" class="form-control validate">
+                            <input type="email" name="email" class="form-control">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="nomTutor">Nombre del tutor</label>
