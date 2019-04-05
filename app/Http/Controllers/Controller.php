@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alumno;
+use App\Models\Asignacion_materias;
+use App\Models\Calificaciones;
 use App\Models\Empleado;
 use App\Models\Usuario;
 use App\Models\Persona;
+use App\Models\Grupo;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -19,15 +22,34 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    //function prueba(){
+    function prueba(){
         /*Insertar usuario
         $usuario = new Usuario;
 
-        $usuario->id = 1;
+        $usuario->id = 2;
         $usuario->pass = Hash::make("1234");
         $usuario->api_token = Hash::make(Str::random(60));
         $usuario->save();*/
 
-        //return dd(Alumno::find(2));
-    //}
+        /*API tokens
+        $api_tokens = collect([]);
+
+        foreach(Usuario::all() as $user)
+            $api_tokens->push($user->api_token);*/
+
+        /*api_token
+        $obj = ["api_token" => Alumno::find(19010001)->persona->usuario->api_token];
+
+        return dd(json_encode($obj));*/
+
+        /*Persona::create([
+            'nom' => 'Milhouse',
+            'apeP' => 'Van',
+            'apeM' => 'Houten',
+            'fecha_nac' => '2002-04-21',
+            'curp' => 'VAHM020421HCLNTLA9'
+        ]);*/
+
+        return dd(Asignacion_materias::find(1)->grupo);
+    }
 }

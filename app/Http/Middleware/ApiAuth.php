@@ -11,6 +11,8 @@ class ApiAuth
 {
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        foreach(Usuario::all() as $user)
+            if($request->get('api_token') == $user->api_token)
+                return $next($request);
     }
 }
