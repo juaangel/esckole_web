@@ -13,3 +13,6 @@ Route::get('/cursos', function(){
 Route::get('/contacto', function(){
     return view('principal.contacto');
 });
+Route::get('/login', function(){
+    return view('plataforma.login');
+});
