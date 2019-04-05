@@ -16,6 +16,6 @@ class Calificaciones extends Model
     }
 
     /*public function materia_unidad(){
-        return $this->
+        return $this->hasOne(Materia_unidad::class, 'materia_unidad');
     }*/
 }
