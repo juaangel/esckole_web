@@ -15,7 +15,7 @@ class Calificaciones extends Model
         return $this->belongsTo(Alumno::class, 'matricula_alumno', 'matricula');
     }
 
-    /*public function materia_unidad(){
-        return $this->hasOne(Materia_unidad::class, 'materia_unidad');
-    }*/
+    public function materia_unidad(){
+        return $this->belongsTo(Materia_unidad::class, 'materia_unidad');
+    }
 }

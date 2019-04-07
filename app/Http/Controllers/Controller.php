@@ -5,10 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Alumno;
 use App\Models\Asignacion_materias;
 use App\Models\Calificaciones;
+use App\Models\Carrera;
 use App\Models\Empleado;
-use App\Models\Usuario;
-use App\Models\Persona;
+use App\Models\Inf_contacto;
+use App\Models\Inf_salud;
 use App\Models\Grupo;
+use App\Models\Materia;
+use App\Models\Materia_unidad;
+use App\Models\Persona;
+use App\Models\TipoEmpleado;
+use App\Models\Usuario;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -50,6 +56,6 @@ class Controller extends BaseController
             'curp' => 'VAHM020421HCLNTLA9'
         ]);*/
 
-        return dd(Asignacion_materias::find(1)->grupo);
+        return dd(Persona::find(2)->usuario);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Asignacion_materias;
+use App\Models\Grupo;
 use App\Models\Persona;
 use App\Models\TipoEmpleado;
 
@@ -17,11 +18,15 @@ class Empleado extends Model
         return $this->hasMany(Asignacion_materias::class, 'maestro_id', 'numEmp');
     }
 
+    public function grupos(){
+        return $this->hasMany(Grupo::class, 'numTutor', 'numEmp');
+    }
+
     public function persona(){
         return $this->belongsTo(Persona::class);
     }
 
-    public function tipo(){
-        return $this->belongsTo(TipoEmpleado::class);
+    public function tipoEmpleado(){
+        return $this->belongsTo(TipoEmpleado::class, 'tipo');
     }
 }

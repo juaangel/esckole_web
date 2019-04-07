@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\Asignacion_materias;
+use App\Models\Grupo;
+use App\Models\Materia_unidad;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,5 +14,13 @@ class Materia extends Model
 
     public function asignacion_materias(){
         return $this->hasMany(Asignacion_materias::class);
+    }
+
+    public function grupos(){
+        return $this->belongsToMany(Grupo::class);
+    }
+
+    public function materia_unidad(){
+        return $this->hasMany(Materia_unidad::class);
     }
 }
