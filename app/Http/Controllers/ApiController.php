@@ -6,6 +6,7 @@ use App\Models\Alumno;
 use App\Models\Empleado;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ApiController extends Controller
 {
@@ -16,17 +17,19 @@ class ApiController extends Controller
         $user = Alumno::find($num);
 
         if($user != null)
-            if($pass == $user->persona->usuario->pass)
+            if(Hash::check($pass, $user->persona->usuario->pass))
                 return json_encode(
                     ["api_token" => $user->persona->usuario->api_token]
                 );
 
         $user = Empleado::find($num);
 
-        /*if($user != null)
-            if($pass == $user->persona->usuario->pass)
+        if($user != null)
+            if(Hash::check($pass, $user->persona->usuario->pass))
                 return json_encode(
                     ["api_token" => $user->persona->usuario->api_token]
-                );*/
+                );
+
+        return json_encode(["api_token" => "false"]);
     }
 }
