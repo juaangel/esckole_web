@@ -88,4 +88,10 @@
         </div>
     </div>
 
+    <!--Google Maps-->
+    <div id="map-container" class="container-fluid text-center">
+       <h4 class="font-weight-bolder escko-green-2">Ubicación del plantel</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7202.90298185019!2d-103.14570088325438!3d25.489984843944768!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xce5fece88d529e1e!2sCBTA+309!5e0!3m2!1ses!2smx!4v1554694543124!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
 @endsection
