@@ -1,0 +1,20 @@
+#jumbo{
+    background-image: url('/img/bg1.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 104px;
+}
+
+#jumbo h3{
+    padding-top: 20px;
+    margin-bottom: -10px;
+}
+
+#jumbo div{
+    margin-top: 30px;
+}
+
+#form-container{
+    margin-top: 60px;
+}

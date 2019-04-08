@@ -1,10 +1,15 @@
 .title-1{
-    font-size: 40px;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.title-2{
+    font-size: 20px;
 }
 
 /*MARGENES-------------------------*/
 .main-container{
-    padding-top: 30px !important;
+    padding-top: 10px !important;
 }
 /*---------------------------------*/
 
@@ -17,8 +22,9 @@
     margin: 20px;
 }
 
-#img-ofimatica{
+.img-curso{
     width: 360px;
+    height: 214px;
 }
 
 .p-cursos{

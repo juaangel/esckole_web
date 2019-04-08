@@ -51,7 +51,7 @@
         <div style="margin-bottom: 80px;"></div>
 
         <footer class="page-footer">
-            <div class="row align-items-center">
+            <div class="row">
                 <p class="col text-left py-1" style="margin-left: 15px;">
                     ©2019 Centro de Bachillerato Tecnológico Agropecuario #309</p>
                 <ul id="contacto" class="col text-right py-1">

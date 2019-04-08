@@ -10,7 +10,7 @@
 }
 
 .navbar a:hover{
-  color: #199450 !important;
+  color: #008000 !important;
 }
 
 #logo{
@@ -93,15 +93,22 @@ ul#contacto > li {
     }
 }
 
-@media screen and (max-width: 741px) {
-    footer{
-        height: 32px;
-        font-size: 10px;
-    }
-}
 @media screen and (max-width: 767px) {
     #content{
         margin-top: 136px;
     }
 }
 
+@media screen and (max-width: 584px) {
+    p {
+        font-size: 14px;
+    }
+
+    footer {
+        height: 44px;
+    }
+
+    footer p, footer a {
+        font-size: 10px;
+    }
+}

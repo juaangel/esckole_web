@@ -65,13 +65,13 @@
     <h3 class="text-center font-weight-bolder cursos">CURSOS</h3>
     <div id="cursos" class="text-center" style="margin-top: 17px; margin-bottom: 60px;">
         <div class="view overlay zoom">
-           <a href="#">
+           <a href="/cursos">
                <img class="img-fluid rounded mx-auto d-block img-cursos" src="img/inicio/ofimatica.png" alt="Escolar - Ofimatica"
                 style="margin-bottom: 20px;">
            </a>
         </div>
         <div class="view overlay zoom">
-           <a href="#">
+           <a href="/cursos">
                <img class="img-fluid rounded mx-auto d-block img-cursos" src="img/inicio/agropecuario.png" alt="Escolar - Ofimatica">
            </a>
         </div>
