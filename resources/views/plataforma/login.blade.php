@@ -22,14 +22,14 @@
   
   
   <div class="card-body">
-  <form class="login" method="POST" action="{{ url('/iniciarsesion') }}"">
+  <form class="login" method="POST" action="{{ url('/iniciarsesion') }}">
     {{csrf_field()}}
-    <div class=" text-center" >
+    <div class="text-center">
        <img src="../img/logo_color.png" width="150" rigth="150">
     <h2 style="color: #0861C7">INGRESO A LA PLATAFORMA</h2>
     </div>
     
-    <div class="form-group" " >
+    <div class="form-group">
       <label for="exampleInputEmail1" style="color:#084B8A; " >Ingresa Matricula</label>
       <i class="fas fa-user"></i>
       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingresa tu usuario" name="usuario_f">
