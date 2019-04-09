@@ -16,6 +16,8 @@ use App\Models\Persona;
 use App\Models\TipoEmpleado;
 use App\Models\Usuario;
 
+use App\Objects\AlumnoDatos;
+
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
@@ -56,6 +58,6 @@ class Controller extends BaseController
             'curp' => 'VAHM020421HCLNTLA9'
         ]);*/
 
-        return dd(Persona::find(2)->usuario);
+        return dd((new AlumnoDatos(19010001))->toJson());
     }
 }

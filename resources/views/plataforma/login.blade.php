@@ -22,21 +22,22 @@
   
   
   <div class="card-body">
-  <form class="login" method="POST" action="{{ url('/iniciarsesion') }}">
-    {{csrf_field()}}
-    <div class="text-center">
-       <img src="../img/logo_color.png" width="150" rigth="150">
+  <div class="text-center">
+       <img src="img/logo_color.png" width="150" rigth="150">
     <h2 style="color: #0861C7">INGRESO A LA PLATAFORMA</h2>
     </div>
     
+   <form class="login" method="POST" action="/login">
+    {{csrf_field()}}
+
     <div class="form-group">
-      <label for="exampleInputEmail1" style="color:#084B8A; " >Ingresa Matricula</label>
+      <label for="num" style="color:#084B8A; ">Matrícula / No. Empleado</label>
       <i class="fas fa-user"></i>
-      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingresa tu usuario" name="usuario_f">
+      <input type="number" class="form-control" placeholder="Ingresa tu número" name="num">
     </div>
-    <div class="form-group" >
-      <label for="exampleInputEmail1" style="color:#084B8A "> Ingresa Contraseña</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingresa tu Contraseña" name="password_f">
+    <div class="form-group">
+      <label for="pass" style="color:#084B8A ">Contraseña</label>
+      <input type="password" class="form-control" placeholder="Ingresa tu contraseña" name="pass">
     
     <div class="form-check">
     </div>
@@ -47,8 +48,7 @@
     </div>
     @endif
     <div class="text-center">
-      <button type="button" class="btn btn-block" style="background-color: #084B8A; color: white">Iniciar Sesion</button>
-
+      <button type="submit" class="btn btn-block" style="background-color: #084B8A; color: white">Iniciar sesión</button>
     </div>
     
 </form>
