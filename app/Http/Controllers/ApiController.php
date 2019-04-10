@@ -22,14 +22,6 @@ class ApiController extends Controller
                     ["api_token" => $user->persona->usuario->api_token]
                 );
 
-        $user = Empleado::find($num);
-
-        if($user != null)
-            if(Hash::check($pass, $user->persona->usuario->pass))
-                return json_encode(
-                    ["api_token" => $user->persona->usuario->api_token]
-                );
-
         return json_encode(["api_token" => "false"]);
     }
 }
