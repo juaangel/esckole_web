@@ -14,13 +14,11 @@ class ApiAuth
     {
         $usuario = Usuario::where('api_token', $request->get('api_token'))->get()->first();
 
-        //dd($usuario->persona->alumno->matricula);
-
         if($usuario != null){
             $request->merge(['usuario' => $usuario]);
             return $next($request);
         }
 
-        return json_encode(['isTrue' => false]);
+        return response(json_encode(['isTrue' => false]));
     }
 }
