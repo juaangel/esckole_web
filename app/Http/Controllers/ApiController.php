@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alumno;
-use App\Models\Empleado;
+use App\Models\Usuario;
+use App\Objects\AlumnoDatos;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -23,5 +24,11 @@ class ApiController extends Controller
                 );
 
         return json_encode(["api_token" => "false"]);
+    }
+
+    function datosAlumno(Request $r){
+        $matri = $r->get('usuario')->persona->alumno->matricula;
+
+        return (new AlumnoDatos($matri))->toJson();
     }
 }

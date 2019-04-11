@@ -58,6 +58,6 @@ class Controller extends BaseController
             'curp' => 'VAHM020421HCLNTLA9'
         ]);*/
 
-        return dd((new AlumnoDatos(19010001))->toJson());
+        return dd(Grupo::find(1)->tutor->persona);
     }
 }

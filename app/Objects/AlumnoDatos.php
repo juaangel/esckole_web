@@ -34,14 +34,17 @@ class AlumnoDatos
         $datosGrupo = $datosAlumno->grupos()
             ->orderBy('grado', 'DESC')
             ->get()->first();
+        $datosTutor = $datosGrupo->tutor->persona;
         $datosContacto = $datosPersona->inf_contacto;
         $datosSalud = $datosPersona->inf_salud;
+
 
         $this->matri = $matri;
         $this->nom = $datosPersona->nom;
         $this->apeP = $datosPersona->apeP;
         $this->apeM = $datosPersona->apeM;
         $this->grupo = $datosGrupo->grado . 'º ' . $datosGrupo->seccion;
+        $this->tutor = $datosTutor->nom . ' ' . $datosTutor->apeP . ' ' . $datosTutor->apeM;
         $this->prom = $datosAlumno->calificaciones->avg('calificacion');
         $this->tipo_beca = $datosAlumno->tipo_beca;
         $this->nom_padre_tutor = $datosAlumno->nom_padre_tutor;
@@ -75,7 +78,8 @@ class AlumnoDatos
             'seguro' => $this->seguro,
             'tipoSangre' => $this->tipoSangre,
             'alergias' => $this->alergias,
-            'enfermedades' => $this->enfermedades
+            'enfermedades' => $this->enfermedades,
+            'isTrue' => true
         ]);
     }
 }

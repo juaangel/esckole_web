@@ -18,3 +18,6 @@ use Illuminate\Http\Request;
 });*/
 
 Route::post('/login', 'ApiController@login');
+
+Route::post('/datosAlumno', 'ApiController@datosAlumno')
+    ->middleware('api_token');
