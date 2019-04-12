@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Alumno;
-use App\Models\Materia_unidad;
+use App\Models\Materia;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +15,7 @@ class Calificaciones extends Model
         return $this->belongsTo(Alumno::class, 'matricula_alumno', 'matricula');
     }
 
-    public function materia_unidad(){
-        return $this->belongsTo(Materia_unidad::class, 'materia_unidad');
+    public function materia(){
+        return $this->belongsTo(Materia::class);
     }
 }

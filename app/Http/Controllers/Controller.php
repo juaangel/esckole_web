@@ -39,16 +39,7 @@ class Controller extends BaseController
         $usuario->api_token = Hash::make(Str::random(60));
         $usuario->save();*/
 
-        /*API tokens
-        $api_tokens = collect([]);
-
-        foreach(Usuario::all() as $user)
-            $api_tokens->push($user->api_token);*/
-
-        /*api_token
-        $obj = ["api_token" => Alumno::find(19010001)->persona->usuario->api_token];
-
-        return dd(json_encode($obj));*/
+        //return dd(json_encode($obj));*/
 
         /*Persona::create([
             'nom' => 'Milhouse',
@@ -58,6 +49,6 @@ class Controller extends BaseController
             'curp' => 'VAHM020421HCLNTLA9'
         ]);*/
 
-        return dd(Grupo::find(1)->tutor->persona);
+        return dd(Materia::find(1)->calificaciones);
     }
 }

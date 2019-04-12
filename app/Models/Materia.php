@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Asignacion_materias;
+use App\Models\Calificaciones;
 use App\Models\Grupo;
 use App\Models\Materia_unidad;
 
@@ -20,7 +21,7 @@ class Materia extends Model
         return $this->belongsToMany(Grupo::class);
     }
 
-    public function materia_unidad(){
-        return $this->hasMany(Materia_unidad::class);
+    public function calificaciones(){
+        return $this->hasMany(Calificaciones::class);
     }
 }
