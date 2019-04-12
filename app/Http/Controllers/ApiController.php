@@ -36,21 +36,31 @@ class ApiController extends Controller
     }
 
     function calificaciones(Request $r){
-        $grupo = $r->get('usuario')->alumno->grupos()
+        $alumno = $r->get('usuario')->persona->alumno;
+
+        $grupo = $alumno->grupos()
             ->orderBy('grado', 'DESC')
             ->get()->first();
 
-        $materias = Materia::where('grado', $grupo->grado);
+        $materias = Materia::where('grado', $grupo->grado)->get();
 
-        $materias_unid = collect([]);
+        $calificacionesAll = collect([]);
 
         foreach($materias as $materia){
-            $mate_unid = Materia_unidad::where('materia_id', $materia->id)->get();
-            $materias_unid->push($mate_unid);
+            //$califsMateria = [collect([])];
+            $califsMateria = [];
+
+            $mat_calificaciones = $materia->calificaciones()->get()
+                ->where('matricula_alumno', $alumno->matricula);
+
+            foreach($mat_calificaciones as $calificacion){
+                //$califsMateria->push($calificacion->calificacion);
+                array_push($califsMateria, $calificacion->calificacion);
+            }
+
+            $calificacionesAll->prepend($califsMateria, $materia->nom);
         }
 
-        $mate_unid = Materia_unidad::where('materia_id');
-
-        return "en construccion";
+        return json_encode(['calificaciones' => $calificacionesAll->toArray()]);
     }
 }

@@ -49,6 +49,27 @@ class Controller extends BaseController
             'curp' => 'VAHM020421HCLNTLA9'
         ]);*/
 
-        return dd(Materia::find(1)->calificaciones);
+        $grupo = Usuario::find(3)->persona->alumno->grupos()
+            ->orderBy('grado', 'DESC')
+            ->get()->first();
+
+        $materias = Materia::where('grado', $grupo->grado)->get();
+
+        $calificacionesAll = collect([]);
+
+        foreach($materias as $materia){
+            $califsMateria = collect([]);
+
+            $mat_calificaciones = $materia->calificaciones()->get()
+                ->where('matricula_alumno', Usuario::find(3)->persona->alumno->matricula);
+
+            foreach($mat_calificaciones as $calificacion){
+                $califsMateria->push($calificacion->calificacion);
+            }
+
+            $calificacionesAll->prepend($califsMateria, $materia->nom);
+        }
+
+        return dd($calificacionesAll->toArray());
     }
 }

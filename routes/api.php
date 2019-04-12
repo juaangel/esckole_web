@@ -22,5 +22,5 @@ Route::post('/login', 'ApiController@login');
 Route::post('/datosAlumno', 'ApiController@datosAlumno')
     ->middleware('api_token');
 
-Route::post('/calificaciones', 'ApiController@calficaciones')
+Route::post('/calificaciones', 'ApiController@calificaciones')
     ->middleware('api_token');
