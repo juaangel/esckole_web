@@ -47,18 +47,21 @@ class ApiController extends Controller
         $calificacionesAll = collect([]);
 
         foreach($materias as $materia){
-            //$califsMateria = [collect([])];
             $califsMateria = [];
 
-            $mat_calificaciones = $materia->calificaciones()->get()
+            $materia_califs = $materia->calificaciones()->get()
                 ->where('matricula_alumno', $alumno->matricula);
 
-            foreach($mat_calificaciones as $calificacion){
-                //$califsMateria->push($calificacion->calificacion);
-                array_push($califsMateria, $calificacion->calificacion);
+            for($i = 0; $i < $materia_califs->count(); $i++){
+                if($materia_califs->get($i) != null){
+                    if($i == 0)
+                    array_push($califsMateria, $materia->nom);
+
+                    array_push($califsMateria, $materia_califs->get($i)->calificacion);
+                }
             }
 
-            $calificacionesAll->prepend($califsMateria, $materia->nom);
+            $calificacionesAll->push($califsMateria);
         }
 
         return json_encode(['calificaciones' => $calificacionesAll->toArray()]);
