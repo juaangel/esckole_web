@@ -1,4 +1,4 @@
-@extends('principal.plantilla')
+@extends('plantillas.inicio')
 @section('extraCSS')
     <link rel="stylesheet" href="css/styles/principal/aspirantes.css">
 @endsection

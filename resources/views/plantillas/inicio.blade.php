@@ -14,7 +14,7 @@
     <!-- Nuestro CSS -->
     <link href="css/styles/styles_principal.css" rel="stylesheet">
     @yield('extraCSS')
-    
+
     <link rel="icon" type="image/png" href="favicon.ico">
     <title>CBTa 309 - @yield('title')</title>
 </head>
@@ -44,10 +44,10 @@
             </ul>
         </div>
     </nav>
-    
+
     <div id="content">
         @yield('content')
-        
+
         <div style="margin-bottom: 80px;"></div>
 
         <footer class="page-footer">
@@ -65,11 +65,11 @@
                         <i class="fas fa-phone fa-lg white-text ml-3" aria-hidden="true"></i>
                         +52 1 (000) 000 0000</a>
                   </li>
-                </ul>  
+                </ul>
             </div>
         </footer>
     </div>
-    
+
     <!-- SCRIPTS -->
       <!-- JQuery -->
       <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>

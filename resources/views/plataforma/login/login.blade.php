@@ -16,17 +16,17 @@
 
     <body style="background-color: #F2F2F2; ">
     <span class="navbar-toggler-icon"></span>
- 
+
   <div  class="container"  style="background-color:transparent; padding-left: 300px; padding-right: 300px;">
    <div class="card" style="background-color: white; border-color:#084B8A;border-width: 3px; ">
-  
-  
+
+
   <div class="card-body">
   <div class="text-center">
        <img src="img/logo_color.png" width="150" rigth="150">
     <h2 style="color: #0861C7">INGRESO A LA PLATAFORMA</h2>
     </div>
-    
+
    <form class="login" method="POST" action="/login">
     {{csrf_field()}}
 
@@ -38,7 +38,7 @@
     <div class="form-group">
       <label for="pass" style="color:#084B8A ">Contraseña</label>
       <input type="password" class="form-control" placeholder="Ingresa tu contraseña" name="pass">
-    
+       </div>
     <div class="form-check">
     </div>
     <br>
@@ -48,10 +48,11 @@
     </div>
     @endif
     <div class="text-center">
-      <button type="submit" class="btn btn-block" style="background-color: #084B8A; color: white">Iniciar sesión</button>
+      <button type="submit" class="btn btn-block" style="background-color: #084B8A; color: white">Iniciar sesión</button><br>
+      <a href="/plataforma/identificacion">¿Olvidaste tu contraseña?</a>
     </div>
-    
-</form>
+
+    </form>
   </div>
 </div>
 </div>

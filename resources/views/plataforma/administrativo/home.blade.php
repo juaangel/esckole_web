@@ -1,4 +1,4 @@
-@extends('plataforma.plantilla')
+@extends('plantillas.plataforma')
 @section('extraCSS')
     <!--<link rel="stylesheet" href="css/styles/principal/cursos.css">-->
 @endsection

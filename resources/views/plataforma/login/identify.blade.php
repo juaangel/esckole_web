@@ -4,6 +4,6 @@
 @endsection
 @section('body')
 
-    <p>Bienvenido maestro {{$nom}}</p>
+    Identificarse
 
 @endsection
