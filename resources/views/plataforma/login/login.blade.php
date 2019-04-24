@@ -23,7 +23,7 @@
 
   <div class="card-body">
   <div class="text-center">
-       <img src="img/logo_color.png" width="150" rigth="150">
+       <img src="/img/logo_color.png" width="150" rigth="150">
     <h2 style="color: #0861C7">INGRESO A LA PLATAFORMA</h2>
     </div>
 
@@ -49,7 +49,7 @@
     @endif
     <div class="text-center">
       <button type="submit" class="btn btn-block" style="background-color: #084B8A; color: white">Iniciar sesión</button><br>
-      <a href="/plataforma/identificacion">¿Olvidaste tu contraseña?</a>
+      <a href="/plataforma/identificacion">¿Olvidaste tus datos?</a>
     </div>
 
     </form>

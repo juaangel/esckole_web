@@ -50,31 +50,11 @@ ul#contacto > li {
     margin-top: 70px;
 }
 
-/*PALETA DE COLORES*/
-.escko-green-1{
-    color: #136E3C !important;
-}
-.escko-green-2{
-    color: #199450 !important;
-}
-.escko-green-3{
-    color: #008000 !important;
-}
-.escko-yellow{
-    color: #F39E35 !important;
-}
-
-.escko-bg-green-1{
-    background-color: #136E3C !important;
-}
-.escko-bg-green-2{
-    background-color: #199450 !important;
-}
-.escko-bg-green-3{
-    background-color: #008000 !important;
-}
-.escko-bg-yellow{
-    background-color: #F39E35 !important;
+#platform {
+    position: static !important;
+    font-size: 25px;
+    margin: 10px;
+    margin-right: 200px;
 }
 
 /*-------------------------------------*/

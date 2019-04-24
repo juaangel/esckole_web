@@ -34,10 +34,10 @@ class Controller extends BaseController
         /*Insertar usuario
         $usuario = new Usuario;
 
-        $usuario->id = 2;
+        $usuario->id = 9;
         $usuario->pass = Hash::make("1234");
         $usuario->api_token = Hash::make(Str::random(60));
-        $usuario->save();*/
+        $usuario->save();
 
         //return dd(json_encode($obj));*/
 
@@ -49,27 +49,14 @@ class Controller extends BaseController
             'curp' => 'VAHM020421HCLNTLA9'
         ]);*/
 
-        $grupo = Usuario::find(3)->persona->alumno->grupos()
-            ->orderBy('grado', 'DESC')
-            ->get()->first();
+        /*$pass = '1234';
 
-        $materias = Materia::where('grado', $grupo->grado)->get();
+        $usuario = Usuario::find(3);
+        $usuario->pass = Hash::make($pass);
+        $usuario->save();*/
 
-        $calificacionesAll = collect([]);
 
-        foreach($materias as $materia){
-            $califsMateria = collect([]);
 
-            $mat_calificaciones = $materia->calificaciones()->get()
-                ->where('matricula_alumno', Usuario::find(3)->persona->alumno->matricula);
-
-            foreach($mat_calificaciones as $calificacion){
-                $califsMateria->push($calificacion->calificacion);
-            }
-
-            $calificacionesAll->prepend($califsMateria, $materia->nom);
-        }
-
-        return dd($calificacionesAll->toArray());
+        return dd("What the fuck are you doing here?");
     }
 }

@@ -8,21 +8,22 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="/css/mdb.min.css" rel="stylesheet">
     <!-- Nuestro CSS -->
-    <link href="css/styles/styles_principal.css" rel="stylesheet">
+    <link href="/css/styles/style.css" rel="stylesheet">
+    <link href="/css/styles/principal/principal.css" rel="stylesheet">
     @yield('extraCSS')
 
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon.ico">
     <title>CBTa 309 - @yield('title')</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md flex-column fixed-top navbar-light bg-light">
         <a class="navbar-brand align-self-center m-0 pb-3 position-md-absolute pb-md-0" href="/">
-            <img id="logo" src="img/logo.png" height="60" alt="CBTa logo">
+            <img id="logo" src="/img/logo.png" height="60" alt="CBTa logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -72,13 +73,13 @@
 
     <!-- SCRIPTS -->
       <!-- JQuery -->
-      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
       <!-- Bootstrap tooltips -->
-      <script type="text/javascript" src="js/popper.min.js"></script>
+      <script type="text/javascript" src="/js/popper.min.js"></script>
       <!-- Bootstrap core JavaScript -->
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="/js/bootstrap.min.js"></script>
       <!-- MDB core JavaScript -->
-      <script type="text/javascript" src="js/mdb.min.js"></script>
+      <script type="text/javascript" src="/js/mdb.min.js"></script>
 
        <!-- jQuery -->
         @yield('script')
