@@ -50,11 +50,12 @@ class ApiController extends Controller
         foreach($materias as $materia){
             $materiaCalifs = $materia->calificaciones()
                 ->where('matricula_alumno', $alumno->matricula)
-                ->orderBy('unidad')->pluck('calificacion')->toArray();
+                ->orderBy('unidad')->pluck('calificacion');
 
             $califList_final->push(
                 json_encode(['nom' => $materia->nom,
-                             'califs' => $materiaCalifs])
+                             'prom' => $materiaCalifs->avg(),
+                             'califs' => $materiaCalifs->toArray()])
             );
         }
 
