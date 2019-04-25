@@ -36,34 +36,28 @@ class ApiController extends Controller
     }
 
     function calificaciones(Request $r){
+        $califList_final = collect([]);
+
         $alumno = $r->get('usuario')->persona->alumno;
 
-        $grupo = $alumno->grupos()
+        $lastGroup = $alumno->grupos()
             ->orderBy('grado', 'DESC')
             ->get()->first();
 
-        $materias = Materia::where('grado', $grupo->grado)->get();
-
-        $calificacionesAll = collect([]);
+        $materias = Materia::where('grado', $lastGroup->grado)
+            ->orderBy('nom')->get();
 
         foreach($materias as $materia){
-            $califsMateria = [];
+            $materiaCalifs = $materia->calificaciones()
+                ->where('matricula_alumno', $alumno->matricula)
+                ->orderBy('unidad')->pluck('calificacion')->toArray();
 
-            $materia_califs = $materia->calificaciones()->get()
-                ->where('matricula_alumno', $alumno->matricula);
-
-            for($i = 0; $i < $materia_califs->count(); $i++){
-                if($materia_califs->get($i) != null){
-                    if($i == 0)
-                    array_push($califsMateria, $materia->nom);
-
-                    array_push($califsMateria, $materia_califs->get($i)->calificacion);
-                }
-            }
-
-            $calificacionesAll->push($califsMateria);
+            $califList_final->push(
+                json_encode(['nom' => $materia->nom,
+                             'califs' => $materiaCalifs])
+            );
         }
 
-        return json_encode(['calificaciones' => $calificacionesAll->toArray()]);
+        return $califList_final->toArray();
     }
 }
