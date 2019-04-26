@@ -41,6 +41,11 @@ class PlataformaController extends Controller
         return back()->with('mensaje', 'Usuario o contraseña incorrectos');
     }
 
+    function cerrarSesion(){
+        Session::pull('user');
+        return redirect('/plataforma');
+    }
+
     # <Recuperación de cuenta>
     function recuperacion(Request $data){
         $tel = $data->get('tel');

@@ -2,6 +2,8 @@
 
 Route::get('/plataforma', 'Plataforma\PlataformaController@platformAccess');
 
+Route::get('/cerrarSesion', 'Plataforma\PlataformaController@cerrarSesion');
+
 // <LOGIN> ------------------------------------------
 
 Route::get('/plataforma/login', function(){
