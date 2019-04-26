@@ -52,11 +52,11 @@ class AlumnoDatos
         $this->tel = $datosContacto->tel;
         $this->email = $datosContacto->correo;
         $this->direccion = $datosContacto->direccion;
-        $this->nss = $datosSalud->nss;
-        $this->seguro = $datosSalud->tipo_seguro;
+        $this->nss = ($datosSalud->nss != null) ? $datosSalud->nss : 'No tiene';
+        $this->seguro = ($datosSalud->tipo_seguro != null) ? $datosSalud->tipo_seguro : 'No tiene';
         $this->tipoSangre = $datosSalud->tipo_sangre;
-        $this->alergias = $datosSalud->alergias;
-        $this->enfermedades = $datosSalud->enfermedades;
+        $this->alergias = ($datosSalud->alergias != null) ? $datosSalud->alergias : 'Ninguna';
+        $this->enfermedades = ($datosSalud->enfermedades != null) ? $datosSalud->enfermedades : 'Ninguna';
     }
 
     public function toJson(){
