@@ -62,14 +62,14 @@ class ApiController extends Controller
 
             $maestroNom = $maestro->nom.' '.$maestro->apeP.' '.$maestro->apeM;
 
-            $califList->push(
-                json_encode(['materia' => $materia->nom,
-                             'maestro' => $maestroNom,
-                             'prom' => $materiaCalifs->avg(),
-                             'califs' => $materiaCalifs->toArray()])
-            );
+            $califList->push([
+                'materia' => $materia->nom,
+                'maestro' => $maestroNom,
+                'prom' => $materiaCalifs->avg(),
+                'califs' => $materiaCalifs->toArray()
+            ]);
         }
 
-        return $califList->toArray();
+        return json_encode($califList->toArray());
     }
 }

@@ -57,8 +57,8 @@
                                 {{ session()->get('user')->nom }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                               <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/cerrarSesion">Cerrar sesión</a>
-                                <!--<div class="dropdown-divider"></div>-->
                             </div>
                         </li>
                     </ul>
