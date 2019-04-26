@@ -57,6 +57,6 @@ class Controller extends BaseController
 
 
 
-        return dd("What the fuck are you doing here?");
+        return dd(Usuario::find(1)->persona->empleado->tipoEmpleado);
     }
 }

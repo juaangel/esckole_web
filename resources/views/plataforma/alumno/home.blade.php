@@ -1,9 +1,14 @@
 @extends('plantillas.plataforma')
 @section('extraCSS')
-    <!--<link rel="stylesheet" href="css/styles/principal/cursos.css">-->
+    <!--<link rel="stylesheet" href="css/styles/plataforma/???.css">-->
 @endsection
-@section('body')
+@section('menu')
+    <a href="#" class="list-group-item list-group-item-action bg-light">Calificaciones</a>
+    <a href="#" class="list-group-item list-group-item-action bg-light d-flex justify-content-between align-items-center">Notificaciones<span class="badge badge-primary badge-pill">0</span></a>
+    <a href="#" class="list-group-item list-group-item-action bg-light">Pagos</a>
+@endsection
+@section('content')
 
-    <p>Bienvenido alumno {{$nom}}</p>
+    <h1 class="mt-4">Bienvenido alumno {{ session()->get('user')->nom }}</h1>
 
 @endsection

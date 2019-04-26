@@ -1,10 +1,8 @@
 <?php
 
-// LOGIN ------------------------------------------
+Route::get('/plataforma', 'Plataforma\PlataformaController@platformAccess');
 
-Route::get('/plataforma', function(){
-    return redirect('/plataforma/login');
-});
+// <LOGIN> ------------------------------------------
 
 Route::get('/plataforma/login', function(){
     return view('plataforma.login.login');
@@ -14,12 +12,12 @@ Route::get('/plataforma/identificacion', function(){
     return view('plataforma.login.identify');
 });
 
-Route::post('/login', 'InicioController@login');
+Route::post('/login', 'Plataforma\PlataformaController@login');
 
-Route::post('/sms', 'InicioController@recuperacion');
+Route::post('/sms', 'Plataforma\PlataformaController@recuperacion');
 
-Route::post('/checkCode', 'InicioController@checkCode');
+Route::post('/checkCode', 'Plataforma\PlataformaController@checkCode');
 
-Route::post('/changePassword', 'InicioController@changePassword');
+Route::post('/changePassword', 'PlataformaController@changePassword');
 
-// /LOGIN ------------------------------------------
+// </LOGIN> ------------------------------------------

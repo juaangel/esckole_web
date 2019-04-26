@@ -52,9 +52,6 @@ class ApiController extends Controller
             ->orderBy('nom')->get();
 
         foreach($materias as $materia){
-            /*Calificaciones del alumno relacionadas a la materia
-            *** Contenido: numeros directos ordenados por unidad
-            */
             $materiaCalifs = $materia->calificaciones()
                 ->where('matricula_alumno', $alumno->matricula)
                 ->orderBy('unidad')->pluck('calificacion');
