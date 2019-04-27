@@ -7,6 +7,7 @@
     <!--SOLO CUANDO ES TUTOR DE UN GRUPO-->
     <a href="#" class="list-group-item list-group-item-action bg-light">Mis grupos</a>
 @endsection
+@section('title') Inicio @endsection
 @section('content')
 
     <h1 class="mt-4">Bienvenido maestro {{ session()->get('user')->nom }}</h1>

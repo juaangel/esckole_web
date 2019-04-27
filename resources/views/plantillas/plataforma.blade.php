@@ -43,6 +43,8 @@
             <nav class="navbar navbar-expand-sm navbar-dark blue-gradient border-bottom">
                 <button class="btn btn-sm btn-primary" id="menu-toggle"><i class="fas fa-align-left"></i></button>
 
+                <span class="navbar-brand white-text ml-3">@yield('title')</span>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
