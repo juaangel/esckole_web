@@ -20,6 +20,8 @@ Route::post('/sms', 'Plataforma\PlataformaController@recuperacion');
 
 Route::post('/checkCode', 'Plataforma\PlataformaController@checkCode');
 
-Route::post('/changePassword', 'PlataformaController@changePassword');
+Route::post('/changePassword', 'Plataforma\PlataformaController@changePassword');
 
 // </LOGIN> ------------------------------------------
+
+Route::get('/plataforma/info_persona', 'Plataforma\PlataformaController@personInfo');

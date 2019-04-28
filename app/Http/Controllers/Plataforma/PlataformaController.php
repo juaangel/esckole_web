@@ -7,6 +7,7 @@ use App\Models\Empleado;
 use App\Models\Inf_contacto;
 use App\Models\Usuario;
 
+use App\Objects\datosAdmin;
 use App\Objects\TwilioSms;
 use App\Objects\UserSession;
 
@@ -113,5 +114,22 @@ class PlataformaController extends Controller
         }
 
         return redirect('/plataforma/login');
+    }
+
+    function personInfo(){
+        $personType = Session::get('user')->tipo;
+
+        if($personType == 'administrativo'){
+            return view('plataforma.administrativo.info_persona')
+                ->with('datos', new datosAdmin(Session::get('user')->person_id));
+        }
+        if($personType == 'alumno'){
+            return view('inConstruct');
+        }
+        if($personType == 'maestro'){
+            return view('inConstruct');
+        }
+
+        return view('plataforma.administrativo.info_persona');
     }
 }

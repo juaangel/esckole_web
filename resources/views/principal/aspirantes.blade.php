@@ -169,6 +169,10 @@
                               <option selected value="Ninguna">Ninguna</option>
                             </select>
                         </div>
+                        <div class="md-form mb-5">
+                            <label data-error="wrong" data-success="right" for="numSeguro">Número de seguro</label>
+                            <input required type="number" name="numSeguro" class="form-control validate">
+                        </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="seguro" style="font-size: 13px;">Tipo de seguro</label>
                             <select id="seguro" name="seguro" class="browser-default custom-select">
@@ -180,6 +184,19 @@
                               <option value="Seguro Popular">Seguro Popular</option>
                               <option selected value="Ninguno">Ninguno</option>
                               <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                           <label data-error="wrong" data-success="right" for="sangre" style="font-size: 13px;">Tipo de sangre</label>
+                            <select name="sangre" class="browser-default custom-select">
+                              <option value="A+">A+</option>
+                              <option value="A-">A-</option>
+                              <option value="B+">B+</option>
+                              <option value="B-">B-</option>
+                              <option selected value="O+">O+</option>
+                              <option value="O-">O-</option>
+                              <option value="A+">AB+</option>
+                              <option value="A-">AB-</option>
                             </select>
                         </div>
                         <div id="inputSeguro" class="md-form mb-5">

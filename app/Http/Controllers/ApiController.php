@@ -7,7 +7,7 @@ use App\Models\Calificaciones;
 use App\Models\Materia;
 use App\Models\Materia_unidad;
 use App\Models\Usuario;
-use App\Objects\AlumnoDatos;
+use App\Objects\datosAlumno;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -32,7 +32,7 @@ class ApiController extends Controller
     function datosAlumno(Request $r){
         $matri = $r->get('usuario')->persona->alumno->matricula;
 
-        return (new AlumnoDatos($matri))->toJson();
+        return (new datosAlumno($matri))->toJson();
     }
 
     function calificaciones(Request $r){

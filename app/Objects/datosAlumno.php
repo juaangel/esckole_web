@@ -4,29 +4,29 @@ namespace App\Objects;
 
 use App\Models\Alumno;
 
-class AlumnoDatos
+class datosAlumno
 {
-    private $matri = 0;
-    private $nom = '';
-    private $apeP = '';
-    private $apeM = '';
-    private $grupo = '';
-    private $prom = 0;
-    private $tipo_beca = '';
+    public $matri = 0;
+    public $nom = '';
+    public $apeP = '';
+    public $apeM = '';
+    public $grupo = '';
+    public $prom = 0;
+    public $tipo_beca = '';
 
-    private $nom_padre_tutor = '';
-    private $tel_padre_tutor = '';
-    private $tutor = '';
+    public $nom_padre_tutor = '';
+    public $tel_padre_tutor = '';
+    public $tutor = '';
 
-    private $tel = '';
-    private $email = '';
-    private $direccion = '';
+    public $tel = '';
+    public $email = '';
+    public $direccion = '';
 
-    private $nss = '';
-    private $seguro = '';
-    private $tipoSangre = '';
-    private $alergias = '';
-    private $enfermedades = '';
+    public $nss = '';
+    public $seguro = '';
+    public $tipoSangre = '';
+    public $alergias = '';
+    public $enfermedades = '';
 
     public function __construct($matri){
         $datosAlumno = Alumno::find($matri);

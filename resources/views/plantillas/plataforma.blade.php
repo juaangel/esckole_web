@@ -16,7 +16,7 @@
     <link href="/css/styles/plataforma/plataforma.css" rel="stylesheet">
     @yield('extraCSS')
 
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon.ico">
     <title>CBTa 309 - Plataforma</title>
 </head>
 
@@ -32,7 +32,7 @@
             <div class="list-group list-group-flush">
                 <a href="/plataforma" class="list-group-item list-group-item-action bg-light">Inicio</a>
                 @yield('menu')
-                <a href="#" class="list-group-item list-group-item-action bg-light">Datos personales</a>
+                <a href="/plataforma/info_persona" class="list-group-item list-group-item-action bg-light">Datos personales</a>
             </div>
         </div>
         <!-- /Sidebar-->

@@ -16,7 +16,7 @@ use App\Models\Persona;
 use App\Models\TipoEmpleado;
 use App\Models\Usuario;
 
-use App\Objects\AlumnoDatos;
+use App\Objects\datosAlumno;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
@@ -57,6 +57,6 @@ class Controller extends BaseController
 
 
 
-        return dd(Usuario::find(1)->persona->empleado->tipoEmpleado);
+        return dd(Persona::find(1));
     }
 }
