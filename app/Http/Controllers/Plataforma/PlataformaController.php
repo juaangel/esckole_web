@@ -132,4 +132,27 @@ class PlataformaController extends Controller
 
         return view('plataforma.administrativo.info_persona');
     }
+
+    function changePassword2(Request $data){
+        $usuario = Usuario::find(Session::get('user')->person_id);
+
+        if($usuario != null){
+            if(Hash::check($data->get('oldPass'), $usuario->pass)){
+                $usuario->pass = Hash::make($data->get('newPass'));
+                $usuario->save();
+
+                return json_encode(['msj' => 'success']);
+            }
+            return json_encode(['msj' => 'incorrectPass']);
+        }
+
+        if($usuario != null && Hash::check($data->get('oldPass'), $usuario->pass)){
+            $usuario->pass = Hash::make($data->get('newPass'));
+            $usuario->save();
+
+            return json_encode(['msj' => true]);
+        }
+
+        return json_encode(['msj' => false]);
+    }
 }

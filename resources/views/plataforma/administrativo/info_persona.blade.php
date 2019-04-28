@@ -116,32 +116,99 @@
                 </table>
             </div>
         </div>
-        <form action="" method="post">
+        <form>
             <div class="md-form form-sm" style="margin-bottom: -30px;">
                 <label for="oldPass">Contraseña actual</label>
-                <input required type="text" name="oldPass" class="form-control validate">
+                <input required type="password" name="oldPass" class="form-control validate">
             </div>
             <div class="row">
                 <div class="col-md">
                     <div class="md-form form-sm">
-                        <label for="oldPass">Nueva contraseña</label>
-                        <input required type="text" name="oldPass" class="form-control validate">
+                        <label for="newPass">Nueva contraseña</label>
+                        <input required type="password" name="newPass" class="form-control validate">
                     </div>
                 </div>
                 <div class="col-md">
                     <div class="md-form form-sm">
-                        <label for="oldPass">Confirmar nueva contraseña</label>
-                        <input required type="text" name="oldPass" class="form-control validate">
+                        <label for="newPass2">Confirmar nueva contraseña</label>
+                        <input required type="password" name="newPass2" class="form-control validate">
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mb-3">
                <div class="col">
-                   <button type="submit" class="btn blue-gradient btn-block">Cambiar contraseña</button>
+                   <button id="newPassBtn" type="button" class="btn blue-gradient btn-block">Cambiar contraseña</button>
+               </div>
+            </div>
+            <div class="row">
+               <div id="alertContainer" class="col">
+
                </div>
             </div>
         </form>
     </div>
 </div>
 
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        var alertContainer = $('#alertContainer'),
+            _token = '{{csrf_token()}}';
+
+        $('#newPassBtn').click(function(){
+            var oldPass = $("input[name='oldPass']").val(),
+                newPass = $("input[name='newPass']").val(),
+                newPass2 = $("input[name='newPass2']").val();
+
+            if(oldPass != "" && oldPass != null){
+                if(newPass != "" && newPass != null){
+                    if(newPass == newPass2){
+                        $.ajax({
+                            url: '/changePassword2',
+                            data: {oldPass, newPass, _token},
+                            type: 'POST',
+                            dataType: 'json',
+                            error: function(response){
+                                console.log(response.responseText);
+                            },
+                            success: function(response){
+                                if(response.msj == 'success'){
+                                    alertContainer.prepend(
+                                        "<div class='alert alert-success' role='alert'><button type='button' class='close-alert'>×</button><i class='fas fa-check-circle mr-2'></i>Contraseña cambiada con éxito.</div>"
+                                    );
+                                }
+                                else if(response.msj == 'incorrectPass'){
+                                    alertContainer.prepend(
+                                        "<div class='alert alert-danger' role='alert'><button type='button' class='close-alert'>×</button><i class='fas fa-exclamation-circle mr-2'></i>Contraseña incorrecta.</div>"
+                                    );
+                                }
+                                else{
+                                    alertContainer.prepend(
+                                        "<div class='alert alert-danger' role='alert'><button type='button' class='close-alert'>×</button><i class='fas fa-exclamation-circle mr-2'></i>Algo salió mal.</div>"
+                                    );
+                                }
+                            }
+                        });
+                    }
+                    else{
+                        alertContainer.prepend(
+                            "<div class='alert alert-warning' role='alert'><button type='button' class='close-alert'>×</button><i class='fas fa-exclamation mr-2'></i>Las contraseñas no coinciden.</div>"
+                        );
+                    }
+                }
+                else{
+                    alertContainer.prepend(
+                        "<div class='alert alert-warning' role='alert'><button type='button' class='close-alert'>×</button><i class='fas fa-exclamation mr-2'></i>No has escrito tu nueva contraseña.</div>"
+                    );
+                }
+            }
+            else{
+                alertContainer.prepend(
+                    "<div class='alert alert-warning' role='alert'><button type='button' class='close-alert'>×</button><i class='fas fa-exclamation mr-2'></i>No has escrito tu contraseña actual.</div>"
+                );
+            }
+        });
+    });
+</script>
 @endsection

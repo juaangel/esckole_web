@@ -90,6 +90,9 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+    $(document).on('click', '.close-alert', function () {
+        $(this).parent().remove();
+    });
   </script>
     <!-- jQuery -->
         @yield('script')
