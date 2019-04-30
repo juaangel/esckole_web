@@ -8,6 +8,7 @@ use App\Models\Inf_contacto;
 use App\Models\Usuario;
 
 use App\Objects\datosAdmin;
+use App\Objects\datosAlumno;
 use App\Objects\TwilioSms;
 use App\Objects\UserSession;
 
