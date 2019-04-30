@@ -3,7 +3,7 @@
 namespace App\Objects;
 
 use App\Models\Alumno;
-
+use App\Models\persona;
 class datosAlumno
 {
     public $matri = 0;
