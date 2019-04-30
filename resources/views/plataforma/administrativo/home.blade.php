@@ -4,7 +4,6 @@
 @endsection
 @section('menu')
     <a href="#" class="list-group-item list-group-item-action bg-light">Inscripciones</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Notificaciones</a>
     <a href="#" class="list-group-item list-group-item-action bg-light">Añadir personal</a>
 @endsection
 @section('title') Inicio @endsection

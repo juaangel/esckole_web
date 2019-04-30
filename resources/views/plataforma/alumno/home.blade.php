@@ -4,8 +4,6 @@
 @endsection
 @section('menu')
     <a href="#" class="list-group-item list-group-item-action bg-light">Calificaciones</a>
-    <a href="#" class="list-group-item list-group-item-action bg-light d-flex justify-content-between align-items-center">Notificaciones<span class="badge badge-primary badge-pill">0</span></a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">Pagos</a>
 @endsection
 @section('title') Inicio @endsection
 @section('content')
