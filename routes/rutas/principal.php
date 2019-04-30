@@ -13,3 +13,7 @@ Route::get('/cursos', function(){
 Route::get('/contacto', function(){
     return view('principal.contacto');
 });
+
+# Peticiones
+
+Route::post('/ficha-online', 'InicioController@fichaOnline');

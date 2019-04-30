@@ -111,17 +111,13 @@
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
-            <form action="" method="post">
+            <form action="/ficha-online" method="post">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <p>Recibirás tu ficha en formato PDF una vez que envíes tus datos, imprime el archivo y asiste al examen de diagnóstico.</p>
                         <div class="md-form mb-5">
                             <label data-error="wrong" data-success="right" for="nom">Nombre</label>
                             <input required type="text" name="nom" class="form-control validate">
-                        </div>
-                        <div class="mb-5"  style="margin-top: -20px;">
-                            <label data-error="wrong" data-success="right" for="f_nac">Fecha de nacimiento</label>
-                            <input required type="date" name="f_nac" class="form-control validate">
                         </div>
                         <div class="row" style="margin-top: -40px;">
                             <div class="col">
@@ -137,6 +133,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mb-5"  style="margin-top: -20px;">
+                            <label data-error="wrong" data-success="right" for="f_nac">Fecha de nacimiento</label>
+                            <input required type="date" name="f_nac" class="form-control validate">
+                        </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="curp">CURP</label>
                             <input required type="text" maxlength="18" name="curp" class="form-control validate text-uppercase">
@@ -146,20 +146,12 @@
                             <input required type="text" name="dir" class="form-control validate">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
-                            <label data-error="wrong" data-success="right" for="tel">Teléfono</label>
+                            <label data-error="wrong" data-success="right" for="tel">Teléfono (con Lada)</label>
                             <input required type="number" name="tel" class="form-control validate">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="email">Correo electrónico</label>
                             <input type="email" name="email" class="form-control">
-                        </div>
-                        <div class="md-form mb-5" style="margin-top: -20px;">
-                            <label data-error="wrong" data-success="right" for="nomTutor">Nombre del tutor</label>
-                            <input required type="text" name="nomTutor" class="form-control validate">
-                        </div>
-                        <div class="md-form mb-5" style="margin-top: -20px;">
-                            <label data-error="wrong" data-success="right" for="telTutor">Teléfono del tutor</label>
-                            <input required type="number" name="telTutor" class="form-control validate">
                         </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="beca" style="font-size: 13px;">Tipo de beca</label>
@@ -171,7 +163,7 @@
                         </div>
                         <div class="md-form mb-5">
                             <label data-error="wrong" data-success="right" for="numSeguro">Número de seguro</label>
-                            <input required type="number" name="numSeguro" class="form-control validate">
+                            <input required type="number" name="numSeguro" maxlength="11" class="form-control validate">
                         </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="seguro" style="font-size: 13px;">Tipo de seguro</label>
@@ -186,6 +178,10 @@
                               <option value="Otro">Otro</option>
                             </select>
                         </div>
+                        <div id="inputSeguro" class="md-form mb-5">
+                            <label data-error="wrong" data-success="right" for="seguroOtro">Específica el nombre del seguro:</label>
+                            <input required type="text" name="seguroOtro" class="form-control validate">
+                        </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="sangre" style="font-size: 13px;">Tipo de sangre</label>
                             <select name="sangre" class="browser-default custom-select">
@@ -198,10 +194,6 @@
                               <option value="A+">AB+</option>
                               <option value="A-">AB-</option>
                             </select>
-                        </div>
-                        <div id="inputSeguro" class="md-form mb-5">
-                            <label data-error="wrong" data-success="right" for="seguroOtro">Específica el nombre del seguro:</label>
-                            <input required type="text" name="seguroOtro" class="form-control validate">
                         </div>
                         <div class="md-form mb-5">
                              <label for="alergias">Alergías</label>
