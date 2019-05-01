@@ -11,6 +11,8 @@ class datosAlumno
     public $apeP = '';
     public $apeM = '';
     public $grupo = '';
+    public $f_nac = '';
+    public $curp = '';
     public $prom = 0;
     public $tipo_beca = '';
     public $nom_padre_tutor = '';
@@ -42,6 +44,8 @@ class datosAlumno
         $this->nom = $datosPersona->nom;
         $this->apeP = $datosPersona->apeP;
         $this->apeM = $datosPersona->apeM;
+        $this->f_nac = $person->fecha_nac;
+        $this->curp = $person->curp;
         $this->grupo = $datosGrupo->grado . 'º ' . $datosGrupo->seccion;
         $this->tutor = $datosTutor->nom . ' ' . $datosTutor->apeP . ' ' . $datosTutor->apeM;
         $this->prom = $datosAlumno->calificaciones->avg('calificacion');
@@ -64,6 +68,8 @@ class datosAlumno
             'nom' => $this->nom,
             'apeP' => $this->apeP,
             'apeM' => $this->apeM,
+           'f_nac' => $this->f_nac,
+            'curp' => $this->curp,
             'grupo' => $this->grupo,
             'prom' => $this->prom,
             'beca' => $this->tipo_beca,
