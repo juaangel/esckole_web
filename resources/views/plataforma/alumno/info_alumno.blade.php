@@ -34,8 +34,8 @@
                         <td>{{$datos->apeM}}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Fecha de nacimiento:</th>
-                        <td>{{$datos->f_nac}}</td>
+                       <th scope="row">Fecha de nacimiento:</th>
+                        <td>{{}}</td>
                     </tr>
                     <tr>
                         <th scope="row">CURP:</th>
