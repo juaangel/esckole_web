@@ -11,9 +11,10 @@ class datosAlumno
     public $apeP = '';
     public $apeM = '';
     public $grupo = '';
+    public $f_nac = '';
+    public $curp = '';
     public $prom = 0;
     public $tipo_beca = '';
-
     public $nom_padre_tutor = '';
     public $tel_padre_tutor = '';
     public $tutor = '';

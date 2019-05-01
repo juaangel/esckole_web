@@ -8,6 +8,7 @@ use App\Models\Inf_contacto;
 use App\Models\Usuario;
 
 use App\Objects\datosAdmin;
+use App\Objects\datosAlumno;
 use App\Objects\TwilioSms;
 use App\Objects\UserSession;
 
@@ -124,7 +125,8 @@ class PlataformaController extends Controller
                 ->with('datos', new datosAdmin(Session::get('user')->person_id));
         }
         if($personType == 'alumno'){
-            return view('inConstruct');
+            return view ('plataforma.alumno.info_alumno')
+             ->with('datos', new datosAlumno(Session::get('user')->num));
         }
         if($personType == 'maestro'){
             return view('inConstruct');
