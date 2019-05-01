@@ -41,13 +41,21 @@
                         <th scope="row">CURP:</th>
                         <td>{{$datos->curp}}</td>
                     </tr>
+                      <tr>
+                        <th scope="row">Tutor:</th>
+                        <td>{{$datos->tutor}}</td>
+                    </tr>
+                      <tr>
+                        <th scope="row">Nombre Del Padre:</th>
+                        <td>{{$datos->nom_padre_tutor}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
-                <h5 class="p-2"><i class="fas fa-user p-2"></i>Datos personales</h5>
+                <h5 class="p-2"><i class="fas fa-user p-2"></i>Datos Academicos</h5>
             </div>
             <table class="table table-borderless table-sm">
                 <tbody>
