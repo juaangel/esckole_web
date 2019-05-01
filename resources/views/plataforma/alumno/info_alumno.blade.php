@@ -39,7 +39,7 @@
                     </tr>
                     <tr>
                         <th scope="row">CURP:</th>
-                        <td>{{$datos->curp}}</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
