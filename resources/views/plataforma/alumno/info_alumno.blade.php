@@ -15,7 +15,7 @@
     <hr class="bg-primary">
 
     <div class="row">
-        <div class="col-md">
+        <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
                 <h5 class="p-2"><i class="fas fa-user p-2"></i>Datos personales</h5>
             </div>
@@ -43,6 +43,7 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
         <div class="col-md">
             <div class="w-100 blue-gradient white-text">
