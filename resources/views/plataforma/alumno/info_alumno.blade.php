@@ -42,10 +42,6 @@
                         <td>{{$datos->curp}}</td>
                     </tr>
                       <tr>
-                        <th scope="row">Tutor:</th>
-                        <td>{{$datos->tutor}}</td>
-                    </tr>
-                      <tr>
                         <th scope="row">Nombre Del Padre:</th>
                         <td>{{$datos->nom_padre_tutor}}</td>
                     </tr>
