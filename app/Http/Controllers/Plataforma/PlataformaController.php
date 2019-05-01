@@ -125,7 +125,8 @@ class PlataformaController extends Controller
                 ->with('datos', new datosAdmin(Session::get('user')->person_id));
         }
         if($personType == 'alumno'){
-            return Session::get('user')->num;
+            return view ('plataforma.alumno.info_alumno')
+             ->with('datos', new datosAlumno(Session::get('user')->num));
         }
         if($personType == 'maestro'){
             return view('inConstruct');
