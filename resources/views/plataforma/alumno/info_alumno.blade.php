@@ -35,7 +35,7 @@
                     </tr>
                     <tr>
                        <th scope="row">Fecha de nacimiento:</th>
-                        <td>{{}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th scope="row">CURP:</th>
