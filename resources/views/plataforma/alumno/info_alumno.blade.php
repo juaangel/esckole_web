@@ -69,7 +69,8 @@
                     </tr>
                     <tr>
                     <th scope="row">Beca:</th>
-                        <td>{{$datos->beca}}</td>
+                        <td>
+                  </td>
                     </tr>
                 </tbody>
             </table>
