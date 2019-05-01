@@ -45,7 +45,8 @@
             </table>
 
         </div>
-        <div class="col-md">
+
+        <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
                 <h5 class="p-2"><i class="fas fa-map-marker-alt p-2"></i>Contacto</h5>
             </div>
@@ -66,7 +67,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md">
+        <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
                 <h5 class="p-2"><i class="fas fa-briefcase-medical p-2"></i>Salud</h5>
             </div>
