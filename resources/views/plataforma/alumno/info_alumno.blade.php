@@ -43,8 +43,38 @@
                     </tr>
                 </tbody>
             </table>
-
         </div>
+
+        <div class="col-md-6">
+            <div class="w-100 blue-gradient white-text">
+                <h5 class="p-2"><i class="fas fa-user p-2"></i>Datos personales</h5>
+            </div>
+            <table class="table table-borderless table-sm">
+                <tbody>
+                    <tr>
+                        <th scope="row">Nombre:</th>
+                        <td>{{$datos->nom}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Apellido paterno:</th>
+                        <td>{{$datos->apeP}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Apellido materno:</th>
+                        <td>{{$datos->apeM}}</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Fecha de nacimiento:</th>
+                        <td>{{$datos->f_nac}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CURP:</th>
+                        <td>{{$datos->curp}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 
         <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
