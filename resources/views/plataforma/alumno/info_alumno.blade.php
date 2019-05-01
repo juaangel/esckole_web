@@ -51,29 +51,25 @@
 
         <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
-                <h5 class="p-2"><i class="fas fa-user p-2"></i>Datos Academicos</h5>
+                <h5 class="p-2"><i class="fa fa-address-card-o  p-2"></i>Datos Academicos</h5>
             </div>
             <table class="table table-borderless table-sm">
                 <tbody>
                     <tr>
-                        <th scope="row">Nombre:</th>
-                        <td>{{$datos->nom}}</td>
+                        <th scope="row">Grupo:</th>
+                        <td>{{$datos->grupo}}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Apellido paterno:</th>
-                        <td>{{$datos->apeP}}</td>
+                        <th scope="row">Tutor:</th>
+                        <td>{{$datos->tutor}}</td>
                     </tr>
                     <tr>
-                        <th scope="row">Apellido materno:</th>
-                        <td>{{$datos->apeM}}</td>
+                        <th scope="row">Promedio:</th>
+                        <td>{{$datos->prom}}</td>
                     </tr>
                     <tr>
-                    <th scope="row">Fecha de nacimiento:</th>
-                        <td>{{$datos->f_nac}}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">CURP:</th>
-                        <td>{{$datos->curp}}</td>
+                    <th scope="row">Beca:</th>
+                        <td>{{$datos->beca}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -98,9 +94,14 @@
                         <th scope="row">Teléfono:</th>
                         <td>{{$datos->tel}}</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Teléfono Del Padre:</th>
+                        <td>{{$datos->tel_padre_tutor}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+
         <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
                 <h5 class="p-2"><i class="fas fa-briefcase-medical p-2"></i>Salud</h5>
