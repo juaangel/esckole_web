@@ -13,6 +13,11 @@
 <!--foreach ($califList as $user)
     <p>This is user </p>
 endforeach-->
+
+@foreach ($califList as $user)
+{{$user['materia']}}
+@endforeach
+
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
