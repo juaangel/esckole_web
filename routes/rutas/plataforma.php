@@ -29,7 +29,5 @@ Route::post('/changePassword', 'Plataforma\PlataformaController@changePassword')
 // </LOGIN> ------------------------------------------
 
 Route::get('/plataforma/info_persona', 'Plataforma\PlataformaController@personInfo');
-Route::get('/plataforma/Calificaciones', 'Plataforma\PlataformaController@Cali');
-
 
 Route::post('/changePassword2', 'Plataforma\PlataformaController@changePassword2');

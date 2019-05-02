@@ -2,29 +2,33 @@
 
 namespace App\Http\Controllers\Plataforma;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Models\Alumno;
-use App\Models\Aspirante;
-use App\Models\Calificaciones;
+use App\Models\Empleado;
 use App\Models\Inf_contacto;
-use App\Models\Inf_salud;
-use App\Models\Persona;
+use App\Models\Usuario;
+
+use App\Objects\datosAdmin;
+use App\Objects\datosAlumno;
+use App\Objects\TwilioSms;
+use App\Objects\UserSession;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\Controller;
+
+
 
 class AlumnoController extends Controller
 {
     function Cali()
     {
 
-     Variable $r;
-     $r = Session::get('user')->num;
-
         //Arreglo a mandar
         $califList = collect([]);
 
         //Datos de alumno
-        $alumno = $r->get('usuario')->persona->alumno;
+        $alumno = Session::get('user')->num('usuario')->persona->alumno;
 
         //Último grupo del alumno
         $lastGroup = $alumno->grupos()
