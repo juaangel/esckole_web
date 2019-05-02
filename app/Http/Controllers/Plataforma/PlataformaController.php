@@ -122,8 +122,8 @@ class PlataformaController extends Controller
 
      Request r;
      r = Session::get('user')->num;
-       return r;
-        /*//Arreglo a mandar
+
+        //Arreglo a mandar
         $califList = collect([]);
 
         //Datos de alumno
@@ -158,7 +158,7 @@ class PlataformaController extends Controller
         }
 
         return json_encode($califList->toArray());
-   return view ('plataforma.alumno.Calificaciones');*/
+  // return view ('plataforma.alumno.Calificaciones');
     }
 
     function personInfo(){
