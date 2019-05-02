@@ -60,6 +60,6 @@ class AlumnoController extends Controller
         }
 
        // return json_encode($califList);
-  	    return view ('plataforma.alumno.Calificaciones',compact(json_encode($califList)));
+  	    return view ('plataforma.alumno.Calificaciones',compact('califList'));
     }
 }

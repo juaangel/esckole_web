@@ -8,6 +8,8 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
+ {{ json_decode($arrayJson) }}
+
 
     <table class="table table-responsive table-bordered">
         <thead>
