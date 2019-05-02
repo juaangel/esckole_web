@@ -3,9 +3,7 @@
     <!--<link rel="stylesheet" href="css/styles/plataforma/???.css">-->
 @endsection
 @section('menu')
-    <a href="#" class="list-group-item list-group-item-action bg-light">Calificaciones</a>
-    <!--SOLO CUANDO ES TUTOR DE UN GRUPO-->
-    <a href="#" class="list-group-item list-group-item-action bg-light">Mis grupos</a>
+    <a href="/plataforma/maestro/calificaciones" class="list-group-item list-group-item-action bg-light">Calificaciones</a>
 @endsection
 @section('title') Inicio @endsection
 @section('content')

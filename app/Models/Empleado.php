@@ -19,6 +19,10 @@ class Empleado extends Model
     }
 
     public function grupos(){
+        return $this->belongsToMany(Grupo::class, 'asignacion_materias', 'maestro_id');
+    }
+
+    public function gruposTutor(){
         return $this->hasMany(Grupo::class, 'numTutor', 'numEmp');
     }
 
