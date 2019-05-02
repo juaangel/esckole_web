@@ -119,11 +119,12 @@ class PlataformaController extends Controller
 
     function Cali()
     {
+     $tipoUsuario = Session::get('user')->tipo;
         //Arreglo a mandar
         $califList = collect([]);
 
         //Datos de alumno
-        $alumno = $r->get('usuario')->persona->alumno;
+        $alumno = Session::get('user')->num('usuario')->persona->alumno;
 
         //Último grupo del alumno
         $lastGroup = $alumno->grupos()
