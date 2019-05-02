@@ -10,12 +10,12 @@
 @section('content')
 <div class="table-responsive-sm col-md-12">
   <table class="table">
- <thead>
+ <thead class="col-md-12">
     <tr>
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
       <th scope="col">Promedio:</th>
-      <th scope="col" class="col-md-1">Unidad:</th>
+      <th scope="col-md-1" class="col-md-1">Unidad:</th>
     </tr>
   </thead>
   <tbody>
