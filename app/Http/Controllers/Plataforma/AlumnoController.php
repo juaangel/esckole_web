@@ -11,6 +11,12 @@ use App\Models\Inf_contacto;
 use App\Models\Inf_salud;
 use App\Models\Persona;
 use App\Http\Controllers\Plataforma\Session
+
+use App\Models\Alumno;
+use App\Models\Empleado;
+use App\Models\Inf_contacto;
+use App\Models\Usuario;
+
 class AlumnoController extends Controller
 {
     function Cali()
