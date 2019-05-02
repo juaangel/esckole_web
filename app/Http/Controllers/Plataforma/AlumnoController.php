@@ -18,18 +18,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\ApiController;
-
+use Illuminate\Database\Eloquent\Model;
 
 class AlumnoController extends Controller
 {
     function Cali()
     {
 
-    	return calificaciones(Session::get('user')->num);
-
         //Arreglo a mandar
-/*        $califList = collect([]);
+        $califList = collect([]);
 
         //Datos de alumno
         $alumno = Session::get('user')->num;
@@ -63,6 +60,6 @@ class AlumnoController extends Controller
         }
 
         return json_encode($califList->toArray());
-  */// return view ('plataforma.alumno.Calificaciones');
+  // return view ('plataforma.alumno.Calificaciones');
     }
 }
