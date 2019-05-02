@@ -11,7 +11,7 @@
 <div class="table-responsive-sm col-md-10">
   <table class="table">
   	  <thead>
-    <tr>
+    <tr class="col-md-10">
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
       <th scope="col">Promedio:</th>
