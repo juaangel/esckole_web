@@ -13,27 +13,26 @@
 <!--foreach ($califList as $user)
     <p>This is user </p>
 endforeach-->
-
-@foreach ($califList as $user)
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
                 <th>Profesor:</th>
                 <th>Materia:</th>
-                <th>Unidad:</th>
                 <th>Promedio:</th>
+                <th>Unidad:</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+				@foreach ($califList as $user)
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
                 <td>{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
                 <td>{{$cali}}</td>
                 @endforeach
+              @endforeach
             </tr>
         </tbody>
     </table>
-    @endforeach
 @endsection
