@@ -8,9 +8,9 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-{{$Calif}}
+{{$califList}}
 
-foreach ($Calif as $user)
+foreach ($califList as $user)
     <p>This is user {{ $user->materia }}</p>
 endforeach
 
