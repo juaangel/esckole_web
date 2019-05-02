@@ -21,9 +21,9 @@
   <tbody>
       @foreach ($califList as $user)
     <tr>
-        <td>{{$user['maestro']}}</td>
-        <td>{{$user['materia']}}</td>
-        <td>{{$user['prom']}}</td>
+        <td class="col-md-1">{{$user['maestro']}}</td>
+        <td class="col-md-1">{{$user['materia']}}</td>
+        <td class="col-md-1">{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
         <td class="col-md-1">{{$cali}}</td>
                  @endforeach
