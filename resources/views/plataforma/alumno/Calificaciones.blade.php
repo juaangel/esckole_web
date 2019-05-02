@@ -29,7 +29,9 @@ endforeach-->
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
                 <td>{{$user['prom']}}</td>
-                <td></td>
+                @foreach ($$user['califs'] as $cali)
+                <td>{{$cali}}</td>
+                @endforeach
             </tr>
         </tbody>
     </table>
