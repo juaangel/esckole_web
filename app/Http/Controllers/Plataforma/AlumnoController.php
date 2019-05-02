@@ -6,18 +6,17 @@ use App\Models\Alumno;
 use App\Models\Empleado;
 use App\Models\Inf_contacto;
 use App\Models\Usuario;
-
+use App\Models\Materia;
+use App\Models\Materia_unidad;
 use App\Objects\datosAdmin;
 use App\Objects\datosAlumno;
-use App\Objects\TwilioSms;
 use App\Objects\UserSession;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
-
-
+use Illuminate\Database\Eloquent\Model;
 
 class AlumnoController extends Controller
 {
@@ -28,7 +27,9 @@ class AlumnoController extends Controller
         $califList = collect([]);
 
         //Datos de alumno
-        $alumno = Session::get('user')->num('usuario')->persona->alumno;
+        $r = Session::get('user')->num;
+
+        $alumno = Alumno::find($r);
 
         //Último grupo del alumno
         $lastGroup = $alumno->grupos()
@@ -58,7 +59,7 @@ class AlumnoController extends Controller
             ]);
         }
 
-        return json_encode($califList->toArray());
-  // return view ('plataforma.alumno.Calificaciones');
+      //  return json_encode($califList->toArray());
+  		 return view ('plataforma.alumno.Calificaciones')->with('datos', new datosAlumno(Session::get('user')->num))->with(json_encode($califList->toArray()));
     }
 }

@@ -9,4 +9,23 @@
 @section('title') Calificaciones @endsection
 @section('content')
 
+    <h1 class="mt-4">Calificaciones del alumno: {{$datos->nom.' '.$datos->apeP.' '.$datos->apeM}}</h1>
+    <table class="table table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Profesor:</th>
+                <th>Materia:</th>
+                <th>Unidad:</th>
+                <th>Promedio:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana Delia Torres</td>
+                <td>Química</td>
+                <td>Unidad 1</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
 @endsection
