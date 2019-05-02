@@ -8,10 +8,8 @@ use App\Models\Inf_contacto;
 use App\Models\Usuario;
 use App\Models\Materia;
 use App\Models\Materia_unidad;
-
 use App\Objects\datosAdmin;
 use App\Objects\datosAlumno;
-use App\Objects\TwilioSms;
 use App\Objects\UserSession;
 
 use Illuminate\Http\Request;
@@ -31,7 +29,7 @@ class AlumnoController extends Controller
         //Datos de alumno
         $r = Session::get('user')->num;
 
-        $alumno = $r->get('usuario')->persona->alumno;
+        $alumno = Alumno::find($r);
 
         return $alumno;
         //Último grupo del alumno
