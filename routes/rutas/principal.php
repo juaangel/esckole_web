@@ -15,5 +15,4 @@ Route::get('/contacto', function(){
 });
 
 # Peticiones
-
 Route::post('/ficha-online', 'InicioController@fichaOnline');

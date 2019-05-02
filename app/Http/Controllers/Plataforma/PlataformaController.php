@@ -117,6 +117,12 @@ class PlataformaController extends Controller
         return redirect('/plataforma/login');
     }
 
+    function Cali()
+    {
+      $personType = Session::get('user')->tipo;
+     return view ('plataforma.alumno.Calificaciones');
+    }
+
     function personInfo(){
         $personType = Session::get('user')->tipo;
 
@@ -131,7 +137,6 @@ class PlataformaController extends Controller
         if($personType == 'maestro'){
             return view('inConstruct');
         }
-
         return view('plataforma.administrativo.info_persona');
     }
 
