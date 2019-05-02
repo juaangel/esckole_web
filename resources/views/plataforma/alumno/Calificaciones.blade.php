@@ -8,7 +8,7 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-@endforeach
+
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
