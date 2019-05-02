@@ -15,7 +15,7 @@
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
       <th scope="col">Unidad:</th>
-      <th scope="col">Promedio:</th>
+      <th scope="col">Promedio</th>
     </tr>
   </thead>
   <tbody>
@@ -23,9 +23,9 @@
     <tr>
         <td>{{$user['maestro']}}</td>
         <td>{{$user['materia']}}</td>
-        @foreach ($user['califs'] as $cali)
-        <td>{{$cali}}</td>
         <td>{{$user['prom']}}</td>
+                @foreach ($user['califs'] as $cali)
+        <td>{{$cali}}</td>
                  @endforeach
         @endforeach
     </tr>
