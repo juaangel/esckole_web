@@ -51,8 +51,8 @@
 
         <div class="col-md-6">
             <div class="w-100 blue-gradient white-text">
-                <h5 class="p-2"><i class="fas fa-user p-2"></i>Datos Academicos</h5>
-            </div>
+                <h5 class="p-2"><i class="fas fa-school p-2"></i>Datos Academicos</h5>
+        </div>
             <table class="table table-borderless table-sm">
                 <tbody>
                     <tr>
