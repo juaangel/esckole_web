@@ -8,9 +8,6 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-
-    @foreach ($califList as $user)
-    <p>This is user {{$user}}</p>
 @endforeach
     <table class="table table-responsive table-bordered">
         <thead>
