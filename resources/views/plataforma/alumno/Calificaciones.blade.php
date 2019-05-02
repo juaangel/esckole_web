@@ -15,11 +15,6 @@
 endforeach-->
 
 @foreach ($califList as $user)
-{{$user['materia']}}
-{{$user['maestro']}}
-
-@endforeach
-
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
@@ -31,11 +26,12 @@ endforeach-->
         </thead>
         <tbody>
             <tr>
-                <td>Ana Delia Torres</td>
-                <td>Química</td>
+                <td>{{$user['maestro']}}</td>
+                <td>{{$user['materia']}}</td>
                 <td>Unidad 1</td>
                 <td>90</td>
             </tr>
         </tbody>
     </table>
+    @endforeach
 @endsection
