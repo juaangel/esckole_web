@@ -31,7 +31,7 @@ class AlumnoController extends Controller
         //Datos de alumno
         $alumno = Session::get('user')->num;
 
-        return alumno;
+        return $alumno;
         //Último grupo del alumno
         /*
         $lastGroup = $alumno->grupos()
