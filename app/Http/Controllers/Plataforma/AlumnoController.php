@@ -59,6 +59,7 @@ class AlumnoController extends Controller
             ]);
         }
 
-  	    return view ('plataforma.alumno.Calificaciones',compact('califList'));
+        return json_encode($califList);
+  	   // return view ('plataforma.alumno.Calificaciones',compact('califList'));
     }
 }
