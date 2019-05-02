@@ -119,7 +119,7 @@ class PlataformaController extends Controller
 
     function Cali()
     {
-        Session::get('user')->num;
+       return Session::get('user')->num;
         /*//Arreglo a mandar
         $califList = collect([]);
 
