@@ -9,6 +9,11 @@
 @section('title') Calificaciones @endsection
 @section('content')
 {{$Calif}}
+
+@@foreach ($Calif as $user)
+    <p>This is user {{ $user->materia }}</p>
+@endforeach
+
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
