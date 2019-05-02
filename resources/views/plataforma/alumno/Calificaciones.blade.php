@@ -8,9 +8,9 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-<div class="table-responsive-sm col-md-12">
-  <table class="table">
-  	  <thead>
+<div class="col-md-15">
+  <table class="table-responsive-sm">
+ <thead>
     <tr class="col-md-12">
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
