@@ -16,6 +16,8 @@ endforeach-->
 
 @foreach ($califList as $user)
 {{$user['materia']}}
+{{$user['maestro']}}
+
 @endforeach
 
     <table class="table table-responsive table-bordered">
