@@ -8,10 +8,10 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-<div class="table-responsive-sm-12">
+<div class="table-responsive-sm">
   <table class="table">
  <thead>
-    <tr class="col-md-12">
+    <tr>
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
       <th scope="col">Promedio:</th>
@@ -25,7 +25,7 @@
         <td>{{$user['materia']}}</td>
         <td>{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
-        <td>{{$cali}}</td>
+        <td class="col-md-12">{{$cali}}</td>
                  @endforeach
         @endforeach
     </tr>
