@@ -120,7 +120,7 @@ class PlataformaController extends Controller
     function Cali()
     {
 
-     Request r;
+     Variable $r;
      $r = Session::get('user')->num;
 
         //Arreglo a mandar
