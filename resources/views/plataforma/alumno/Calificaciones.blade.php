@@ -23,16 +23,6 @@ endforeach-->
             </tr>
         </thead>
         <tbody>
-		  @foreach ($califList as $user)
-            <tr>
-                <td>{{$user['maestro']}}</td>
-                <td>{{$user['materia']}}</td>
-                <td>{{$user['prom']}}</td>
-                @foreach ($user['califs'] as $cali)
-                <td>{{$cali}}</td>
-            </tr>
-                @endforeach
-              @endforeach
         </tbody>
     </table>
 <div class="table-responsive-sm">
@@ -43,7 +33,16 @@ endforeach-->
 
 <div class="table-responsive-md">
   <table class="table">
-    ...
+    		  @foreach ($califList as $user)
+            <tr>
+                <td>{{$user['maestro']}}</td>
+                <td>{{$user['materia']}}</td>
+                <td>{{$user['prom']}}</td>
+                @foreach ($user['califs'] as $cali)
+                <td>{{$cali}}</td>
+            </tr>
+                @endforeach
+              @endforeach
   </table>
 </div>
 
