@@ -8,7 +8,7 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-<?php echo e(json_decode($arrayJson)); ?>
+{{$califList}}
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
