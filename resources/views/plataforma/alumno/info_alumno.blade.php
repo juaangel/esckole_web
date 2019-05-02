@@ -122,11 +122,15 @@
                     </tr>
                     <tr>
                         <th scope="row" colspan="2">Alergías:</th>
-                         <td colspan="2">{{$datos->alergias}}</td>
                     </tr>
-                     <tr>
+                    <tr>
+                        <td colspan="2">{{$datos->alergias}}</td>
+                    </tr>
+                    <tr>
                         <th scope="row" colspan="3">Enfermedades:</th>
-                         <td colspan="2">{{$datos->enfermedades}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">{{$datos->enfermedades}}</td>
                     </tr>
                 </tbody>
             </table>
