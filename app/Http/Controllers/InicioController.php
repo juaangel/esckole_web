@@ -27,6 +27,8 @@ class InicioController extends Controller
             'apeM' => $R->get('apeM'),
             'fNac' => $R->get('f_nac'),
             'curp' => $R->get('curp'),
+            'nom_padre_tutor' => $R->get('padreTutor'),
+            'tel_padre_tutor' => $R->get('telPadreTutor'),
             'dir' => $R->get('dir'),
             'tel' => $R->get('tel'),
             'email' => $R->get('email'),
