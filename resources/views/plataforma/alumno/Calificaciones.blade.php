@@ -10,7 +10,7 @@
 @section('content')
 {{$Calif}}
 
-@@foreach ($Calif as $user)
+@foreach ($Calif as $user)
     <p>This is user {{ $user->materia }}</p>
 @endforeach
 
