@@ -23,16 +23,17 @@ endforeach-->
             </tr>
         </thead>
         <tbody>
+		  @foreach ($califList as $user)
             <tr>
-				@foreach ($califList as $user)
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
                 <td>{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
                 <td>{{$cali}}</td>
+            </tr>
                 @endforeach
               @endforeach
-            </tr>
+
         </tbody>
     </table>
 @endsection
