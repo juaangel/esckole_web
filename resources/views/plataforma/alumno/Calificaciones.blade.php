@@ -8,8 +8,11 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
+{{$califList}}
 
-    <h1 class="mt-4">Calificaciones del alumno: {{$datos->nom.' '.$datos->apeP.' '.$datos->apeM}}</h1>
+<!--foreach ($califList as $user)
+    <p>This is user </p>
+endforeach-->
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
