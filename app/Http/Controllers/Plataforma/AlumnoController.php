@@ -10,7 +10,6 @@ use App\Models\Calificaciones;
 use App\Models\Inf_contacto;
 use App\Models\Inf_salud;
 use App\Models\Persona;
-use Illuminate\Http\Request;
 
 class AlumnoController extends Controller
 {
