@@ -10,7 +10,7 @@ use App\Models\Calificaciones;
 use App\Models\Inf_contacto;
 use App\Models\Inf_salud;
 use App\Models\Persona;
-
+use App\Http\Controllers\Plataforma\Session
 class AlumnoController extends Controller
 {
     function Cali()
