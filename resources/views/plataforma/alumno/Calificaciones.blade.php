@@ -28,8 +28,8 @@ endforeach-->
             <tr>
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
-                <td>Unidad 1</td>
-                <td>90</td>
+                <td>{{$user['prom']}}</td>
+                <td>{{$user['califs']}}</td>
             </tr>
         </tbody>
     </table>
