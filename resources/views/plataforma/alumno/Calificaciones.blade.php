@@ -19,8 +19,8 @@
     </tr>
   </thead>
   <tbody>
+    	  @foreach ($califList as $user)
     <tr>
-    		  @foreach ($califList as $user)
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
                 @foreach ($user['califs'] as $cali)
