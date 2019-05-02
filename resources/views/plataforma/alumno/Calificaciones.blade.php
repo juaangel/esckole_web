@@ -15,8 +15,8 @@
 endforeach-->
 
 @foreach ($califList as $user)
-    @foreach ($user->materia as $post)
-       {{$post->$materia}}
+    @foreach ($user as $post)
+       {{$post}}
     @endforeach
 @endforeach
 
