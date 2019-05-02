@@ -59,7 +59,6 @@ class AlumnoController extends Controller
             ]);
         }
 
-       $Calif = json_encode($califList);
-  	    return view ('plataforma.alumno.Calificaciones',compact('Calif'));
+  	    return view ('plataforma.alumno.Calificaciones',compact('califList'));
     }
 }
