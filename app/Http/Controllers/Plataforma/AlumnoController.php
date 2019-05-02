@@ -17,14 +17,11 @@ class AlumnoController extends Controller
     function Cali()
     {
 
-     T_VAR $r;
-     $r = Session::get('user')->num;
-
         //Arreglo a mandar
         $califList = collect([]);
 
         //Datos de alumno
-        $alumno = $r->get('usuario')->persona->alumno;
+        $alumno = Session::get('user')->num->get('usuario')->persona->alumno;
 
         //Último grupo del alumno
         $lastGroup = $alumno->grupos()
