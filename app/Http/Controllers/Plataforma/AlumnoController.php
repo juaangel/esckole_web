@@ -17,7 +17,7 @@ class AlumnoController extends Controller
     function Cali()
     {
 
-     Var $r;
+     T_VAR $r;
      $r = Session::get('user')->num;
 
         //Arreglo a mandar
