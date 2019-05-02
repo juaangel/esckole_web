@@ -29,7 +29,9 @@ class AlumnoController extends Controller
         $califList = collect([]);
 
         //Datos de alumno
-        $alumno = Session::get('user')->num;
+        $r = Session::get('user')->num;
+
+        $alumno = $r->get('usuario')->persona->alumno;
 
         return $alumno;
         //Último grupo del alumno
