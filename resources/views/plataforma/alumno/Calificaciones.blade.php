@@ -14,6 +14,12 @@
     <p>This is user </p>
 endforeach-->
 
+@foreach ($califList as $user)
+    @foreach ($user as $post)
+       {{$post->$materia}}
+    @endforeach
+@endforeach
+
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
