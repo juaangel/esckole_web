@@ -1,5 +1,9 @@
 <?php
 
+include 'plataforma/administrativo.php';
+include 'plataforma/alumno.php';
+include 'plataforma/maestro.php';
+
 Route::get('/plataforma', 'Plataforma\PlataformaController@platformAccess');
 
 Route::get('/cerrarSesion', 'Plataforma\PlataformaController@cerrarSesion');
