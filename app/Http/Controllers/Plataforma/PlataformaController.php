@@ -120,7 +120,7 @@ class PlataformaController extends Controller
     function Cali()
     {
 
-     Variable $r;
+     /*Variable $r;
      $r = Session::get('user')->num;
 
         //Arreglo a mandar
@@ -159,7 +159,7 @@ class PlataformaController extends Controller
 
         return json_encode($califList->toArray());
   // return view ('plataforma.alumno.Calificaciones');
-    }
+    */}
 
     function personInfo(){
         $personType = Session::get('user')->tipo;
