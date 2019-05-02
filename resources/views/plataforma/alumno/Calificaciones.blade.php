@@ -8,7 +8,7 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-{{$califList->materia}}
+{{$califList}}
     <table class="table table-responsive table-bordered">
         <thead>
             <tr>
