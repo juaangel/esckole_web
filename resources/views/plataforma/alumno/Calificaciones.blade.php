@@ -29,7 +29,7 @@ endforeach-->
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
                 <td>{{$user['prom']}}</td>
-                @foreach ($$user['califs'] as $cali)
+                @foreach ($user['califs'] as $cali)
                 <td>{{$cali}}</td>
                 @endforeach
             </tr>
