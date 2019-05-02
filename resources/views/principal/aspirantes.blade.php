@@ -142,6 +142,14 @@
                             <input required type="text" maxlength="18" name="curp" class="form-control validate text-uppercase">
                         </div>
                         <div class="md-form mb-5" style="margin-top: -20px;">
+                            <label data-error="wrong" data-success="right" for="padreTutor">Nombre del padre o tutor</label>
+                            <input type="text" name="padreTutor" class="form-control">
+                        </div>
+                        <div class="md-form mb-5" style="margin-top: -20px;">
+                            <label data-error="wrong" data-success="right" for="telPadreTutor">Teléfono del padre o tutor</label>
+                            <input type="number" name="telPadreTutor" class="form-control">
+                        </div>
+                        <div class="md-form mb-5" style="margin-top: -20px;">
                             <label data-error="wrong" data-success="right" for="dir">Dirección</label>
                             <input required type="text" name="dir" class="form-control validate">
                         </div>
@@ -180,7 +188,7 @@
                         </div>
                         <div id="inputSeguro" class="md-form mb-5">
                             <label data-error="wrong" data-success="right" for="seguroOtro">Específica el nombre del seguro:</label>
-                            <input required type="text" name="seguroOtro" class="form-control validate">
+                            <input type="text" name="seguroOtro" class="form-control validate">
                         </div>
                         <div class="form-group">
                            <label data-error="wrong" data-success="right" for="sangre" style="font-size: 13px;">Tipo de sangre</label>
