@@ -8,13 +8,13 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-<div class="table-responsive-sm">
+<div class="table-responsive-xl">
   <table class="table">
   	  <thead>
     <tr>
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
-      <th scope="col-sm">Unidad:</th>
+      <th scope="col">Unidad:</th>
       <th scope="col">Promedio:</th>
     </tr>
   </thead>
