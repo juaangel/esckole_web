@@ -8,7 +8,6 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-{{$califList}}
 <div class="table-responsive-sm">
   <table class="table">
   	  <thead>
@@ -21,15 +20,12 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
     		  @foreach ($califList as $user)
-            <tr>
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
                 @foreach ($user['califs'] as $cali)
                 <td>{{$cali}}</td>
                 <td>{{$user['prom']}}</td>
-            </tr>
                 @endforeach
               @endforeach
     </tr>
