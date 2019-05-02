@@ -4,6 +4,7 @@
 @endsection
 @section('menu')
 
+                <a href="/plataforma/Calificaciones" class="list-group-item list-group-item-action bg-light">Calificaciones</a>
 @endsection
 @section('title') Datos personales @endsection
 @section('content')

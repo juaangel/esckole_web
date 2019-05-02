@@ -32,7 +32,6 @@
             <div class="list-group list-group-flush">
                 <a href="/plataforma" class="list-group-item list-group-item-action bg-light">Inicio</a>
                 @yield('menu')
-                <a href="/plataforma/Calificaciones" class="list-group-item list-group-item-action bg-light">Calificaciones</a>
                 <a href="/plataforma/info_persona" class="list-group-item list-group-item-action bg-light">Datos personales</a>
             </div>
         </div>
