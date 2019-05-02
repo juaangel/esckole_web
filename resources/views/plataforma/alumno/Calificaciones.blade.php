@@ -9,35 +9,31 @@
 @section('title') Calificaciones @endsection
 @section('content')
 {{$califList}}
-
-<!--foreach ($califList as $user)
-    <p>This is user </p>
-endforeach-->
-    <table class="table table-responsive table-bordered">
-        <thead>
-            <tr>
-                <th>Profesor:</th>
-                <th>Materia:</th>
-                <th>Promedio:</th>
-                <th>Unidad:</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
 <div class="table-responsive-sm">
   <table class="table">
+  	  <thead>
+    <tr>
+      <th scope="col">Profesor:</th>
+      <th scope="col">Materia:</th>
+      <th scope="col">Unidad:</th>
+      <th scope="col">Promedio:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
     		  @foreach ($califList as $user)
             <tr>
                 <td>{{$user['maestro']}}</td>
                 <td>{{$user['materia']}}</td>
-                <td>{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
                 <td>{{$cali}}</td>
+                <td>{{$user['prom']}}</td>
             </tr>
                 @endforeach
               @endforeach
+    </tr>
+  </tbody>
   </table>
 </div>
 @endsection
