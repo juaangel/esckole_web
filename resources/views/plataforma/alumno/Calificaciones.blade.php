@@ -14,20 +14,20 @@
     <tr>
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
-      <th scope="col">Unidad:</th>
+      <th scope="col-sm">Unidad:</th>
       <th scope="col">Promedio:</th>
     </tr>
   </thead>
   <tbody>
-    	  @foreach ($califList as $user)
+      @foreach ($califList as $user)
     <tr>
-                <td>{{$user['maestro']}}</td>
-                <td>{{$user['materia']}}</td>
-                @foreach ($user['califs'] as $cali)
-                <td>{{$cali}}</td>
-                <td>{{$user['prom']}}</td>
-                @endforeach
-              @endforeach
+        <td>{{$user['maestro']}}</td>
+        <td>{{$user['materia']}}</td>
+        @foreach ($user['califs'] as $cali)
+        <td>{{$cali}}</td>
+        <td>{{$user['prom']}}</td>
+        @endforeach
+        @endforeach
     </tr>
   </tbody>
   </table>
