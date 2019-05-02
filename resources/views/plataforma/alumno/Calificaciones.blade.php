@@ -10,9 +10,9 @@
 @section('content')
 {{$califList}}
 
-foreach ($califList as $user)
+@foreach ($califList as $user)
     <p>This is user {{ $user->materia }}</p>
-endforeach
+@endforeach
 
     <table class="table table-responsive table-bordered">
         <thead>
