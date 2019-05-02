@@ -6,6 +6,8 @@ use App\Models\Alumno;
 use App\Models\Empleado;
 use App\Models\Inf_contacto;
 use App\Models\Usuario;
+use App\Models\Materia;
+use App\Models\Materia_unidad;
 
 use App\Objects\datosAdmin;
 use App\Objects\datosAlumno;
