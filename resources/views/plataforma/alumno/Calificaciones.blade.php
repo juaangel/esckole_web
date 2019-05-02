@@ -26,9 +26,9 @@
         @foreach ($user['califs'] as $cali)
         <td>{{$cali}}</td>
         <td>{{$user['prom']}}</td>
-        @endforeach
-        @endforeach
     </tr>
+            @endforeach
+        @endforeach
   </tbody>
   </table>
 </div>
