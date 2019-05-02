@@ -25,13 +25,8 @@ endforeach-->
         <tbody>
         </tbody>
     </table>
-<div class="table-responsive-sm">
-  <table class="table">
-    ...
-  </table>
-</div>
 
-<div class="table-responsive-md">
+<div class="table-responsive-sm">
   <table class="table">
     		  @foreach ($califList as $user)
             <tr>
@@ -45,17 +40,4 @@ endforeach-->
               @endforeach
   </table>
 </div>
-
-<div class="table-responsive-lg">
-  <table class="table">
-    ...
-  </table>
-</div>
-
-<div class="table-responsive-xl">
-  <table class="table">
-    ...
-  </table>
-</div>
-
 @endsection
