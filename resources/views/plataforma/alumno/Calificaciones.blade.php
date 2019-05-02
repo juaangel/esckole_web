@@ -28,10 +28,4 @@
             </tr>
         </tbody>
     </table>
-
- @foreach($califList as $cali)
-
-{{$cali['materia']}}
-
-  @endforeach
 @endsection
