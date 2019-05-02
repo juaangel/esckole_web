@@ -25,7 +25,7 @@
         <td>{{$user['materia']}}</td>
         <td>{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
-        <td class="col-md-12">{{$cali}}</td>
+        <td class="col-md-1">{{$cali}}</td>
                  @endforeach
         @endforeach
     </tr>
