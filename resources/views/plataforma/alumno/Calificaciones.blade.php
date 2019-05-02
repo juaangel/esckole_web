@@ -8,24 +8,24 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-<div class="table">
+<div class="table-responsive-sm col-md-12">
   <table class="table">
-  	  <thead>
+ <thead>
     <tr>
-      <th scope="">Profesor:</th>
-      <th scope="">Materia:</th>
-      <th scope="">Promedio</th>
-      <th scope="">Unidad:</th>
+      <th scope="col">Profesor:</th>
+      <th scope="col">Materia:</th>
+      <th scope="col">Promedio:</th>
+      <th class="col-md-1">Unidad:</th>
     </tr>
   </thead>
   <tbody>
       @foreach ($califList as $user)
     <tr>
-        <td>{{$user['maestro']}}</td>
-        <td>{{$user['materia']}}</td>
-        <td>{{$user['prom']}}</td>
+        <td class="col-md-1">{{$user['maestro']}}</td>
+        <td class="col-md-1">{{$user['materia']}}</td>
+        <td class="col-md-1">{{$user['prom']}}</td>
                 @foreach ($user['califs'] as $cali)
-        <td>{{$cali}}</td>
+        <td class="col-md-1">{{$cali}}</td>
                  @endforeach
         @endforeach
     </tr>
