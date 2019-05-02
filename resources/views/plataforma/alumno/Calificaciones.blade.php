@@ -15,7 +15,7 @@
       <th scope="col">Profesor:</th>
       <th scope="col">Materia:</th>
       <th scope="col">Promedio:</th>
-      <th class="col-md-5">Unidad:</th>
+      <th class="col-md-1">Unidad:</th>
     </tr>
   </thead>
   <tbody>
