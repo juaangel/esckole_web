@@ -69,7 +69,7 @@
                     </tr>
                     <tr>
                     <th scope="row">Beca:</th>
-                      <td></td>
+                      <td>{{$datos->tipo_beca}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -106,6 +106,7 @@
             <div class="w-100 blue-gradient white-text">
                 <h5 class="p-2"><i class="fas fa-briefcase-medical p-2"></i>Salud</h5>
             </div>
+
             <table class="table table-borderless table-sm">
                 <tbody>
                    <tr>
@@ -138,6 +139,7 @@
     </div>
 
     <h3 class="mt-3 text-primary">Cuenta de usuario</h3>
+
     <div class="container mb-4">
         <div class="row">
             <div class="col-xs-6">
@@ -151,6 +153,7 @@
                 </table>
             </div>
         </div>
+
         <form>
             <div class="md-form form-sm" style="margin-bottom: -30px;">
                 <label for="oldPass">Contraseña actual</label>
