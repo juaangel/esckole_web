@@ -1,6 +1,5 @@
 <?php
 
-namespace App\Http\Controllers\Plataforma;
 
 class AlumnoController extends Controller
 {
