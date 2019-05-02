@@ -60,6 +60,6 @@ class AlumnoController extends Controller
         }
 
       //  return json_encode($califList->toArray());
-  		 return view ('plataforma.alumno.Calificaciones');
+  		 return view ('plataforma.alumno.Calificaciones')->with('datos', new datosAlumno(Session::get('user')->num));
     }
 }
