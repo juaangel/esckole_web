@@ -31,9 +31,7 @@ class AlumnoController extends Controller
 
         $alumno = Alumno::find($r);
 
-        return $alumno;
         //Último grupo del alumno
-        /*
         $lastGroup = $alumno->grupos()
             ->orderBy('grado', 'DESC')
             ->get()->first();
@@ -61,7 +59,7 @@ class AlumnoController extends Controller
             ]);
         }
 
-        return json_encode($califList->toArray());*/
+        return json_encode($califList->toArray());
   // return view ('plataforma.alumno.Calificaciones');
     }
 }
