@@ -15,6 +15,8 @@ class Aspirante extends Model
         'apeM',
         'fNac',
         'curp',
+        'nom_padre_tutor',
+        'tel_padre_tutor',
         'dir',
         'tel',
         'email',
