@@ -8,7 +8,7 @@
 @endsection
 @section('title') Calificaciones @endsection
 @section('content')
-<div class="table-responsive-sm">
+<div class="table-responsive-sm col-md-12">
   <table class="table">
  <thead>
     <tr>
