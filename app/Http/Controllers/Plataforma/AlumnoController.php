@@ -1,5 +1,23 @@
 <?php
 
+namespace App\Http\Controllers\Plataforma;
+
+use App\Models\Alumno;
+use App\Models\Empleado;
+use App\Models\Inf_contacto;
+use App\Models\Usuario;
+
+use App\Objects\datosAdmin;
+use App\Objects\datosAlumno;
+use App\Objects\TwilioSms;
+use App\Objects\UserSession;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\Controller;
+
+
 
 class AlumnoController extends Controller
 {
