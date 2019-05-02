@@ -119,7 +119,6 @@ class PlataformaController extends Controller
 
     function Cali()
     {
-      $personType = Session::get('user')->tipo;
      return view ('plataforma.alumno.Calificaciones');
     }
 
