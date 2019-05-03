@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Persona extends Model
 {
+    protected $primaryKey = 'id';
+    protected $table = "personas";
     protected $fillable = ['nom', 'apeP', 'apeM', 'fecha_nac', 'curp'];
 
     public function alumno(){
@@ -33,4 +35,7 @@ class Persona extends Model
     public function usuario(){
         return $this->hasOne(Usuario::class, 'id');
     }
+
+     
+
 }

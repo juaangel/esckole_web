@@ -3,48 +3,71 @@
 namespace App\Http\Controllers\Plataforma;
 
 use App\Models\Alumno;
-use App\Models\Aspirante;
-use App\Models\Calificaciones;
-use App\Models\Inf_contacto;
-use App\Models\Inf_salud;
-use App\Models\Persona;
+use App\Models\Empleado;
+use App\Models\TipoEmpleado;
 
+use App\Models\Inf_contacto;
+use App\Models\Usuario;
+use App\Models\Calificaciones;
+use App\Models\Aspirante;
+use App\Objects\datosAdmin;
+use App\Objects\datosAlumno;
+use App\Objects\TwilioSms;
+use App\Objects\UserSession;
+use App\Models\Persona;
+use App\Models\Inf_salud;
+use App\Models\Grupo;
 use Illuminate\Http\Request;
+use  Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Plataforma\Aspirantes;
+
 
 class AdministrativoController extends Controller
 {
-    function inscripcionesView(){
-        $aspirantes = Aspirante::all()->where('status', 'pendiente');
+ 
+ function Rpersonal(){
+        $personType = Session::get('user')->tipo;
 
-        return view('plataforma.administrativo.inscripciones', compact('aspirantes'));
+         return view('plataforma.administrativo.añadir_personal')->with('datos', new datosAdmin(Session::get('user')->person_id));
     }
 
-    /*function altaAlumno(Request $R){
-        $aspirante = Aspirantes::find($R->get('folio'));
+
+ function inscripcionesView(){
+        $aspirantes = Aspirante::all()->where('status', 'pendiente');
+        return view('plataforma.administrativo.añadir_alumno', compact('aspirantes'));
+    }
+
+
+    function altaAlumno(Request $r, $id){
+
+    
+        $aspirantes = Aspirante::find($id);
+
 
         $persona = new Persona();
-        $persona->nom = $aspirante->nom;
-        $persona->apeP = $aspirante->apeP;
-        $persona->apeM = $aspirante->apeM;
-        $persona->fecha_nac = $aspirante->fNac;
-        $persona->curp = $aspirante->curp;
+        $persona->nom = $aspirantes->nom;
+        $persona->apeP = $aspirantes->apeP;
+        $persona->apeM = $aspirantes->apeM;
+        $persona->fecha_nac = $aspirantes->fNac;
+        $persona->curp = $aspirantes->curp;
         $persona->save();
-
         $infContacto = new Inf_contacto();
         $infContacto->id = $persona->id;
-        $infContacto->tel = $aspirante->dir;
-        $infContacto->correo = $aspirante->tel;
-        $infContacto->direccion = $aspirante->email;
+        $infContacto->tel = $aspirantes->dir;
+        $infContacto->correo = $aspirantes->tel;
+        $infContacto->direccion = $aspirantes->email;
         $infContacto->save();
 
         $infSalud = new Inf_salud();
         $infSalud->id = $persona->id;
-        $infSalud->nss = $aspirante->numSeguro;
-        $infSalud->tipo_seguro = $aspirante->seguro;
-        $infSalud->tipo_sangre = $aspirante->tipo_sangre;
-        $infSalud->alergias = $aspirante->alergias;
-        $infSalud->enfermedades = $aspirante->enfermedades;
+        $infSalud->nss = $aspirantes->numSeguro;
+        $infSalud->tipo_seguro = $aspirantes->seguro;
+        $infSalud->tipo_sangre = $aspirantes->tipo_sangre;
+        $infSalud->alergias = $aspirantes->alergias;
+        $infSalud->enfermedades = $aspirantes->enfermedades;
         $infSalud->save();
 
         $matriculas = Alumno::all()->pluck('matricula');
@@ -66,12 +89,16 @@ class AdministrativoController extends Controller
         $alumno = new Alumno();
         $alumno->matricula = $matri;
         $alumno->persona_id = $persona->id;
-        $alumno->nom_padre_tutor = $aspirante->nom_padre_tutor;
-        $alumno->tel_padre_tutor = $aspirante->tel_padre_tutor;
-        $alumno->tipo_beca = $aspirante->tipo_beca;
-        $alumno->exam_diag = $R->get('examen');
+        $alumno->nom_padre_tutor = $aspirantes->nom_padre_tutor;
+        $alumno->tel_padre_tutor = $aspirantes->tel_padre_tutor;
+        $alumno->tipo_beca = $aspirantes->tipo_beca;
+        $alumno->grupo_actual = $grupo->id;
+        $alumno->save();
 
-        $alumno->grupos()->save($grupo);
+
+
+       
+
 
         $materias = $grupo->materias;
 
@@ -82,8 +109,47 @@ class AdministrativoController extends Controller
                 $calificacion->matricula_alumno = $alumno->matricula;
                 $calificacion->materia_id = $mat->id;
                 $calificacion->unidad = $i;
+                
                 $calificacion->save();
             }
         }
-    }*/
-}
+
+        $aspirantes = Aspirante::all()->where('status', 'pendiente');
+        return view('plataforma.administrativo.alta',compact('aspirantes'));
+
+
+     }
+        function regPer(Request $r)
+    {
+
+        $per = new Persona();
+        
+        $per->nom = $r->nom;
+        $per->apeP = $r->paterno;
+        $per->apeM = $r->materno;
+        $per->fecha_nac = $r->f_naci;
+        $per->curp = $r->curp;
+        $per->save();
+
+
+        $tp=new TipoEmpleado();
+        $tp->tipo=$r->tipo;
+                $tp->save();
+
+
+          $te=new Empleado();
+        $te->persona_id = $per->id;
+        $te->tipo=$tp->tipo;
+                $te->save();
+
+         return "Personal Registrado"; 
+
+
+    }
+
+    function verper(){
+        $per = Persona::all()->where('status', 'pendiente');
+
+        return view('plataforma.administrativo.añadir_personal',compact('per'));
+    }
+   }

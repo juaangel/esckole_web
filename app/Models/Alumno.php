@@ -22,6 +22,6 @@ class Alumno extends Model
     }
 
     public function persona(){
-        return $this->belongsTo(Persona::class);
+        return $this->belongsToMan(Persona::class);
     }
 }
