@@ -19,7 +19,7 @@
       <th>Apellido M</th>
       <th>Telefono</th>
     <th>Fecha de Solicitud</th>
-      <th>Dar de Alta</th>
+          <th>Dar de Alta</th>
     </tr>
   </thead>
   <tbody>

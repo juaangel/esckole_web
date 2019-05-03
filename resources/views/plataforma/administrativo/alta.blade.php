@@ -21,7 +21,6 @@
 
   <div class="card-body">
   <div class="text-center">
-       <img src="/img/logo_color.png" width="150" rigth="150">
     <h2 style="color: #0861C7">Alumno Registrado</h2>
     </div>
   </div>
