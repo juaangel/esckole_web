@@ -95,18 +95,13 @@ class AdministrativoController extends Controller
         $alumno->grupo_actual = $grupo->id;
         $alumno->save();
 
-
-
-       
-
-
         $materias = $grupo->materias;
 
         foreach($materias as $mat){
             $unidades = $mat->unidades;
             for($i = 1; $i <= $unidades; $i++){
                 $calificacion = new Calificaciones();
-                $calificacion->matricula_alumno = $alumno->matricula;
+                $calificacion->matricula_alumno =$matri;
                 $calificacion->materia_id = $mat->id;
                 $calificacion->unidad = $i;
                 

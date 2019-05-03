@@ -25,6 +25,7 @@ class AlumnoController extends Controller
 
         //Arreglo a mandar
         $califList = collect([]);
+        
 
         //Datos de alumno
         $r = Session::get('user')->num;
